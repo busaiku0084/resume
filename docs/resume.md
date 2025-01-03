@@ -1,4 +1,17 @@
-# 職務経歴書
+<style>
+  details {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
+# 職務経歴書（工事中）
 
 2024年12月25日
 O/S
@@ -26,32 +39,85 @@ O/S
 
 ### 株式会社MPX
 
-#### コーポレートサイト（WordPress）のEC2からFargate移行
-**期間:** 2024年11月〜2024年12月（2ヶ月）
-**役割:** メンバー
-**担当:** 要件定義、設計、実装、テスト、運用保守
+<details>
+  <summary>コーポレートサイト（WordPress）のEC2からFargate移行</summary>
+  <ul>
+    <li><strong>期間:</strong> 2024年11月〜2024年12月（2ヶ月）</li>
+    <li><strong>役割:</strong> メンバー</li>
+    <li><strong>担当:</strong> 要件定義、設計、実装、テスト、運用保守</li>
+    <li><strong>概要:</strong> AWS EC2上で運用されていたWordPressサイトをFargateに移行。インフラ設計からコンテナ化、CI/CD構築までを対応。</li>
+    <li><strong>成果:</strong></li>
+    <ul>
+      <li>メディア管理を改善（S3永続化、CloudFront最適化）</li>
+      <li>CodePipelineを用いて自動デプロイを構築</li>
+      <li>ComposerでWordPressプラグインのバージョン管理を効率化</li>
+    </ul>
+  </ul>
+</details>
 
-- AWS EC2上で運用されていたWordPressサイトをFargateに移行。インフラ設計からコンテナ化、CI/CD構築までを対応。
-- メディア管理を改善（S3永続化、CloudFront最適化）。
-- CodePipelineを用いて自動デプロイを構築。
-- ComposerでWordPressプラグインのバージョン管理を効率化。
-
-**技術スタック:** AWS（Fargate, S3, CloudFront, RDS）、PHP、ShellScript、Docker、Composer
+<details>
+  <summary>コーポレートサイト（WordPress）のEC2からFargate移行22</summary>
+  <ul>
+    <li><strong>期間:</strong> 2024年11月〜2024年12月（2ヶ月）</li>
+    <li><strong>役割:</strong> メンバー</li>
+    <li><strong>担当:</strong> 要件定義、設計、実装、テスト、運用保守</li>
+    <li><strong>概要:</strong> AWS EC2上で運用されていたWordPressサイトをFargateに移行。インフラ設計からコンテナ化、CI/CD構築までを対応。</li>
+    <li><strong>成果:</strong></li>
+    <ul>
+      <li>メディア管理を改善（S3永続化、CloudFront最適化）</li>
+      <li>CodePipelineを用いて自動デプロイを構築</li>
+      <li>ComposerでWordPressプラグインのバージョン管理を効率化</li>
+    </ul>
+  </ul>
+</details>
 
 ---
 
 ### 株式会社レコチョク
 
-#### 画像変換サーバのリプレイス
-**期間:** 2023年4月〜2023年9月（6ヶ月）
-**役割:** メンバー
-**担当:** 詳細設計、実装、テスト、CI/CD構築
+<details>
+  <summary>画像変換サーバのリプレイス</summary>
+  <ul>
+    <li><strong>期間:</strong> 2023年4月〜2023年9月（6ヶ月）</li>
+    <li><strong>役割:</strong> メンバー</li>
+    <li><strong>担当:</strong> 詳細設計、実装、テスト、CI/CD構築</li>
+    <li><strong>概要:</strong> Javaで実装されたシステムをSpring Bootでリプレイスし、性能向上を実現。</li>
+    <li><strong>成果:</strong></li>
+    <ul>
+      <li>ローカル環境改善（Docker導入）、AWS構成再設計、CI/CDパイプライン構築</li>
+      <li>PostgreSQLのバージョンアップやCDN導入で安定性を向上</li>
+    </ul>
+  </ul>
+</details>
+<details>
+  <summary>画像変換サーバのリプレイス</summary>
+  <ul>
+    <li><strong>期間:</strong> 2023年4月〜2023年9月（6ヶ月）</li>
+    <li><strong>役割:</strong> メンバー</li>
+    <li><strong>担当:</strong> 詳細設計、実装、テスト、CI/CD構築</li>
+    <li><strong>概要:</strong> Javaで実装されたシステムをSpring Bootでリプレイスし、性能向上を実現。</li>
+    <li><strong>成果:</strong></li>
+    <ul>
+      <li>ローカル環境改善（Docker導入）、AWS構成再設計、CI/CDパイプライン構築</li>
+      <li>PostgreSQLのバージョンアップやCDN導入で安定性を向上</li>
+    </ul>
+  </ul>
+</details>
 
-- Javaで実装されたシステムをSpring Bootでリプレイスし、性能向上を実現。
-- ローカル環境改善（Docker導入）、AWS構成再設計、CI/CDパイプライン構築。
-- PostgreSQLのバージョンアップやCDN導入で安定性を向上。
-
-**技術スタック:** AWS、Java、Spring Boot、PostgreSQL、Docker、Terraform、GitHub Actions
+<details>
+  <summary>画像変換サーバのリプレイス</summary>
+  <ul>
+    <li><strong>期間:</strong> 2023年4月〜2023年9月（6ヶ月）</li>
+    <li><strong>役割:</strong> メンバー</li>
+    <li><strong>担当:</strong> 詳細設計、実装、テスト、CI/CD構築</li>
+    <li><strong>概要:</strong> Javaで実装されたシステムをSpring Bootでリプレイスし、性能向上を実現。</li>
+    <li><strong>成果:</strong></li>
+    <ul>
+      <li>ローカル環境改善（Docker導入）、AWS構成再設計、CI/CDパイプライン構築</li>
+      <li>PostgreSQLのバージョンアップやCDN導入で安定性を向上</li>
+    </ul>
+  </ul>
+</details>
 
 ---
 

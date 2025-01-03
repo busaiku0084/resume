@@ -29,13 +29,12 @@
 
   <script>
     // Fetch and render the Markdown file
-    fetch('./resume.md') // README.mdを同じディレクトリから取得
+    fetch('./resume.md')
       .then(response => {
         if (!response.ok) throw new Error('Markdownファイルが見つかりません');
         return response.text();
       })
       .then(md => {
-        // 最新のMarked.jsでは `marked.parse()` を使用
         document.getElementById('content').innerHTML = marked.parse(md);
       })
       .catch(error => {

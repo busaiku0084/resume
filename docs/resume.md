@@ -1,23 +1,3 @@
-<style>
-  details {
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    border-radius: 5px;
-  }
-  summary {
-    font-weight: bold;
-    cursor: pointer;
-  }
-</style>
-
-# 職務経歴書（工事中）
-
-2024年12月25日
-O/S
-
----
-
 ## 職務要約
 
 バックエンドエンジニアとしてシステム開発に従事しつつ、クラウドインフラの設計・構築も担当。AWSやDockerを活用したモダンな開発基盤の整備を得意とし、特に業務効率化を目的としたツール開発や既存システムのリプレイスに強みを持つ。
@@ -26,114 +6,487 @@ O/S
 
 また、CI/CDの導入やクラウドサービスの活用を通じて、迅速かつ安定したデプロイ環境の構築を実現。幅広い技術スタックを駆使して、システムのパフォーマンス向上や保守性改善を実現してきた。今後もバックエンドとクラウドインフラを掛け合わせたシステム設計を中心に、幅広い分野で貢献していきたいと考えている。
 
----
-
 ## 職務経歴
 
-- **2024年10月〜現在** 株式会社MPX（正社員）
-- **2022年4月〜2024年9月** 株式会社レコチョク（正社員）
-
----
+| 期間                      | 勤務形態      | 備考                      |
+|---------------------------|---------------|---------------------------|
+| **2024年10月〜現在**      | 正社員（A社） | 電力市場分析配信サービス  |
+| **2022年4月〜2024年9月**  | 正社員（B社） | 音楽配信サービス          |
 
 ## 開発経歴
 
-### 株式会社MPX
+### 正社員（A社）
 
 <details>
-  <summary>コーポレートサイト（WordPress）のEC2からFargate移行</summary>
-  <ul>
-    <li><strong>期間:</strong> 2024年11月〜2024年12月（2ヶ月）</li>
-    <li><strong>役割:</strong> メンバー</li>
-    <li><strong>担当:</strong> 要件定義、設計、実装、テスト、運用保守</li>
-    <li><strong>概要:</strong> AWS EC2上で運用されていたWordPressサイトをFargateに移行。インフラ設計からコンテナ化、CI/CD構築までを対応。</li>
-    <li><strong>成果:</strong></li>
+  <summary>
+    コーポレートサイト（WordPress）のEC2からFargate移行
+    <span>2024年/3ヶ月</span>
+  </summary>
+  <div>
     <ul>
-      <li>メディア管理を改善（S3永続化、CloudFront最適化）</li>
-      <li>CodePipelineを用いて自動デプロイを構築</li>
-      <li>ComposerでWordPressプラグインのバージョン管理を効率化</li>
-    </ul>
-  </ul>
+      <li><strong>カテゴリ:</strong> <span>webサービス<span> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>要件定義</span> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>フロントエンド</span> <span>インフラ</span></li>
+      <li><strong>使用技術:</strong> <span>AWS</span> <span>CI/CD</span> <span>Docker</span> <span>Git</span> <span>PHP</span> <span>WordPress</span></li>
+  </div>
+
+# プロジェクト概要
+コーポレートサイト（WordPress）のEC2からFargate移行
+
+# チーム情報
+チーム人数：1名
+
+# 開発・実装内容
+### 【概要】
+AWS EC2上で運用されていたWordPressサイトをFargateに移行。
+インフラ設計から実装、コンテナ化、CI/CD構築、メディア管理の改善までを一貫して対応。
+
+### 【内容】
+- **メディア管理の改善**
+  - メディアファイルの差分がGitに多く含まれており、運用負荷が高かったため、S3へ永続化。
+  - Amazon CloudFrontを使用してメディア配信を最適化。
+- **CI/CDパイプラインの構築**
+  - AWS CodePipelineとCodeBuildを使用して、Fargateへの自動デプロイを実現。
+  - 各環境（開発・本番）でのスムーズなデプロイを可能に。
+- **WordPressプラグインとコアの管理の効率化**
+  - Composerを導入し、プラグインやWordPressコアのバージョン管理を自動化。
+  - 商用プラグインも含めた構成を再設計し、Git管理は必要最小限に削減。
+- **Dockerコンテナ化**
+  - WordPressの公式イメージをベースにDockerfileを設計。PHPモジュールの追加やBedrockディレクトリ構成の適用。
+  - ローカル環境の再現性を確保しつつ、ECS上でのパフォーマンスを最適化。
+
+### 【課題・問題点】
+- **Git運用の課題**
+  - Git管理されていたファイルが膨大で、差分の確認や運用が困難な状態に。必要なリソースを最小限に絞り、運用負荷を削減。
+- **メディアファイルの永続化**
+  - 既存環境ではインスタンス内に保存されており、デプロイ時にデータが失われるリスクがあった。S3の導入で解決。
+- **プラグインの依存性管理**
+  - プラグインのインストールや更新が手動で行われており、管理が煩雑だった。Composerの導入により自動化を実現。
+
+### 【工夫・思考プロセス】
+- **運用負荷を最小限に抑える設計**
+  - 永続化や管理方法の見直しにより、デプロイのスムーズさと保守性を向上。
+- **環境間の一貫性の確保**
+  - DockerとBedrockを活用して、本番環境と開発環境を可能な限り同期。
+  - ECSタスク定義の変数で環境設定を統一。
+- **メディア管理の改善とパフォーマンス向上**
+  - S3とCloudFrontを組み合わせ、運用コスト削減と配信速度向上を同時に実現。
+
+### 【成果】
+- Fargate移行により、インフラ運用の負担が軽減し、スケーラビリティが向上。
+- S3永続化により、メディアファイル管理の効率化を達成。
+- CI/CDパイプラインにより、デプロイ時間を大幅に短縮し、エラーリスクを軽減。
+- Composer導入により、プラグイン管理が効率化され、バージョン管理の正確性を向上。
+
+# 使用技術（まとめ）
+- **プログラミング言語**: PHP, ShellScript
+- **フレームワーク**: Bedrock
+- **インフラ**: AWS（Fargate, S3, CloudFront, RDS）
+- **コンテナ**: Docker, Docker Compose
+- **CI/CD**: AWS CodePipeline, CodeBuild
+- **バージョン管理**: Git, CodeCommit
+- **その他ツール**: Composer
 </details>
 
 <details>
-  <summary>コーポレートサイト（WordPress）のEC2からFargate移行22</summary>
-  <ul>
-    <li><strong>期間:</strong> 2024年11月〜2024年12月（2ヶ月）</li>
-    <li><strong>役割:</strong> メンバー</li>
-    <li><strong>担当:</strong> 要件定義、設計、実装、テスト、運用保守</li>
-    <li><strong>概要:</strong> AWS EC2上で運用されていたWordPressサイトをFargateに移行。インフラ設計からコンテナ化、CI/CD構築までを対応。</li>
-    <li><strong>成果:</strong></li>
+  <summary>
+    社内ツールの作成（電力市場価格データ加工ツール）
+    <span>2024年/1ヶ月</span>
+  </summary>
+  <div>
     <ul>
-      <li>メディア管理を改善（S3永続化、CloudFront最適化）</li>
-      <li>CodePipelineを用いて自動デプロイを構築</li>
-      <li>ComposerでWordPressプラグインのバージョン管理を効率化</li>
-    </ul>
-  </ul>
+      <li><strong>カテゴリ:</strong> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span></li>
+      <li><strong>使用技術:</strong> <span>AWS</span> <span>Docker</span> <span>Git</span> <span>Python</span></li>
+  </div>
+
+# プロジェクト概要
+社内ツールの作成（電力市場価格データ加工ツール）
+
+# チーム情報
+チーム人数：1名
+
+# 開発・実装内容
+### 【概要】
+電力市場価格に関するデータを加工・集計し、グラフ作成に適したデータ形式に変換するツールを試験的に作成。
+オペレーション部門がこれまで手動で対応していた複雑な作業を効率化し、将来的な顧客提供を視野に入れたプロトタイプとして開発。
+
+### 【内容】
+- **データ加工・集計処理の実装**
+  - 複数のCSVやExcelファイルを入力として受け取り、統合・加工し、電力市場価格やフォワードカーブの分析用データを生成。
+  - 出力データはそのままグラフ化やレポート作成に使用可能な形式で設計。
+- **Pythonを使用したツール開発**
+  - 処理の再現性と環境依存性を排除するため、PythonとDockerを活用して設計。
+  - 社内利用ではDockerイメージを提供し、業務効率を向上。将来的にはexe化やAWS配信などの選択肢を検討。
+- **業務効率向上を重視した設計**
+  - 手動で行われていた複雑なデータ処理を自動化し、人的ミスを排除。
+  - 操作フローやエラー表示を工夫し、ユーザーが直感的に操作可能な仕様を実現。
+- **ヒアリングを重視した仕様策定**
+  - オペレーション部門との詳細なヒアリングを繰り返し、実際の業務フローに即した仕様を策定。
+  - 利用者視点での課題を共有し、使いやすさと効率性を両立させる機能を実装。
+
+### 【課題・問題点】
+- **仕様の不確定性**
+  - 初期段階では要件が曖昧で、利用者の業務フローやニーズを正確に把握するためのヒアリングが必要だった。
+- **既存業務の非効率性**
+  - データ処理が完全に手動で行われており、ミスや作業時間の増大が常態化していた。これをツールで置き換える必要があった。
+- **データフォーマットの多様性**
+  - 入力データの形式が多岐にわたり、ツールの柔軟性を確保する必要があった。
+
+### 【工夫・思考プロセス】
+- **将来の拡張性を意識した設計**
+  - 社内ツールとしての利用を前提にしながら、顧客提供を視野に入れた柔軟な設計を採用。
+  - 実装の段階で、追加機能や異なる運用フローへの適応を想定。
+- **ヒアリングと改善のサイクル**
+  - 定期的にオペレーション担当者からフィードバックを得て、仕様やUIをブラッシュアップ。
+  - ユーザー視点を取り入れることで、業務効率向上に直結する機能を優先的に開発。
+- **作業効率を最大化する機能提案**
+  - データ処理の自動化だけでなく、エラーメッセージの明確化や操作性向上の提案を実施。
+
+### 【成果】
+- 業務の大幅な効率化を実現し、これまで手動で処理していた作業を自動化。ミスの削減と作業時間の短縮を達成。
+- 試験導入ながら、オペレーション部門から高い評価を得て、今後の本格的な導入・展開の基盤を構築。
+- 顧客提供を視野に入れた設計により、さらなる改良や追加機能の実装が容易な状態を確保。
+- ツールの改善により、業務フローそのものの見直しが促進され、運用の質が向上。
+
+### 【今後の展開】
+- 顧客向け提供に向けたツールの改善（UI強化、運用環境の選択肢拡大）。
+- AWSを活用したクラウド型ツールとしての配信や、スタンドアロン実行可能なexe化の検討。
+- データ可視化やグラフ生成機能の統合によるさらなる付加価値の提供。
+
+# 使用技術（まとめ）
+- **プログラミング言語**: Python
+- **データ処理**: pandas, openpyxl
+- **コンテナ**: Docker
+- **バージョン管理**: Git
+- **その他ツール**: AWS CLI（検討段階で活用）
 </details>
 
----
-
-### 株式会社レコチョク
+### 正社員（B社）
 
 <details>
-  <summary>画像変換サーバのリプレイス</summary>
-  <ul>
-    <li><strong>期間:</strong> 2023年4月〜2023年9月（6ヶ月）</li>
-    <li><strong>役割:</strong> メンバー</li>
-    <li><strong>担当:</strong> 詳細設計、実装、テスト、CI/CD構築</li>
-    <li><strong>概要:</strong> Javaで実装されたシステムをSpring Bootでリプレイスし、性能向上を実現。</li>
-    <li><strong>成果:</strong></li>
+  <summary>
+    集計システムのJava7からJava8対応
+    <span>2024年/2ヶ月</span>
+  </summary>
+  <div>
     <ul>
-      <li>ローカル環境改善（Docker導入）、AWS構成再設計、CI/CDパイプライン構築</li>
-      <li>PostgreSQLのバージョンアップやCDN導入で安定性を向上</li>
-    </ul>
-  </ul>
-</details>
-<details>
-  <summary>画像変換サーバのリプレイス</summary>
-  <ul>
-    <li><strong>期間:</strong> 2023年4月〜2023年9月（6ヶ月）</li>
-    <li><strong>役割:</strong> メンバー</li>
-    <li><strong>担当:</strong> 詳細設計、実装、テスト、CI/CD構築</li>
-    <li><strong>概要:</strong> Javaで実装されたシステムをSpring Bootでリプレイスし、性能向上を実現。</li>
-    <li><strong>成果:</strong></li>
-    <ul>
-      <li>ローカル環境改善（Docker導入）、AWS構成再設計、CI/CDパイプライン構築</li>
-      <li>PostgreSQLのバージョンアップやCDN導入で安定性を向上</li>
-    </ul>
-  </ul>
+      <li><strong>カテゴリ:</strong> <span>webサービス<span> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
+      <li><strong>使用技術:</strong> <span>AWS</span> <span>API</span> <span>SQL</span> <span>Git</span> <span>Java</span> <span>Spring Boot</span> <span>JUnit5</span></li>
+  </div>
+
+# プロジェクト概要
+集計システムのJava7からJava8対応
+
+# チーム情報
+チーム人数：1名
+
+# 開発・実装内容
+### 【概要】
+Java7で動作していた既存の集計システムをJava8に移行。
+Spring BootやAuroraのバージョンアップも併せて対応し、システム全体のモダナイズを図った。
+
+### 【内容】
+- **Javaのバージョンアップ**
+  - Java7からJava8への移行に対応。
+  - Java8以降のモダンな記述方法（ラムダ式やStream APIなど）を導入。
+  - 将来的にJava17へ移行するための準備として、ドキュメントを充実化。
+- **テスト基盤のアップデート**
+  - JUnit4からJUnit5への移行を実施し、モダンなテストフレームワークに対応。
+  - テストコードをリファクタリングし、可読性と保守性を向上。
+- **ローカル開発環境の改善**
+  - 既存のWindows向け構築手順をMac環境に対応させるようにドキュメントを更新。
+  - 古いJava7環境のサポートが切れているため、業務委託者の作業効率を改善。
+- **関連システムのバージョンアップ**
+  - Spring BootやAuroraのバージョンを最新安定版にアップデート。
+  - Redshiftのクエリ最適化や互換性テストを実施し、集計処理のパフォーマンスを維持。
+
+### 【課題・問題点】
+- **バージョン互換性の課題**
+  - Java8移行時に発生したライブラリの非互換問題を解消。<br/>特にSpring BootやAuroraとの互換性調整が大きな課題だった。
+- **古い環境の運用負荷**
+  - 業務委託者が使用していたWindows環境と、開発チームで使用するMac環境での設定が異なり、ドキュメントの再整備が必要だった。
+- **テスト基盤の移行**
+  - JUnit4からJUnit5への移行に伴い、アノテーションやテスト設定の大幅な変更が必要だった。
+
+### 【工夫・思考プロセス】
+- **継続性を重視したドキュメント整備**
+  - 将来的なJava17移行を見据え、詳細な手順書や考慮点を記載。
+  - 作業の引き継ぎをスムーズにするため、ドキュメントを可能な限り具体化。
+- **ローカル環境の多様性を考慮**
+  - Windows/Mac両環境での再現性を確保し、チーム全体での作業効率を向上。
+- **パフォーマンスと安定性の両立**
+  - RedshiftやAuroraのバージョンアップに際して、既存クエリや設定が最適に動作するように細心の注意を払って対応。
+
+### 【成果】
+- Java8移行により、開発効率とシステム保守性が向上。
+- ドキュメントの整備により、後続作業（Java17移行）がスムーズに行える基盤を構築。
+- JUnit5への移行により、テストの拡張性と記述の簡潔化を実現。
+- ローカル環境の多様性に対応することで、チームメンバー間の環境差を解消。
+
+# 使用技術（まとめ）
+- **プログラミング言語**: Java, SQL
+- **フレームワーク**: Spring Boot
+- **データベース**: Aurora, Redshift
+- **テストフレームワーク**: JUnit 4 → JUnit 5
+- **バージョン管理**: Git
+- **その他ツール**: IntelliJ IDEA, AWS CLI
 </details>
 
 <details>
-  <summary>画像変換サーバのリプレイス</summary>
-  <ul>
-    <li><strong>期間:</strong> 2023年4月〜2023年9月（6ヶ月）</li>
-    <li><strong>役割:</strong> メンバー</li>
-    <li><strong>担当:</strong> 詳細設計、実装、テスト、CI/CD構築</li>
-    <li><strong>概要:</strong> Javaで実装されたシステムをSpring Bootでリプレイスし、性能向上を実現。</li>
-    <li><strong>成果:</strong></li>
+  <summary>
+    リダイレクタ管理ツールのリプレイス
+    <span>2023年/6ヶ月</span>
+  </summary>
+  <div>
     <ul>
-      <li>ローカル環境改善（Docker導入）、AWS構成再設計、CI/CDパイプライン構築</li>
-      <li>PostgreSQLのバージョンアップやCDN導入で安定性を向上</li>
-    </ul>
-  </ul>
+      <li><strong>カテゴリ:</strong> <span>webサービス<span> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>フロントエンド</span> <span>インフラ</span></li>
+      <li><strong>使用技術:</strong> Python Flask TypeScript React AWS Docker GitHub GitHub Actions Datadog CI/CD API PostgreSQL</li>
+  </div>
+
+# プロジェクト概要
+リダイレクタ管理ツールのリプレイス
+
+# チーム情報
+チーム人数：2名
+※ 上長がコードレビューを担当
+
+# 開発・実装内容
+### 【概要】
+PerlとPHPでフルスクラッチ実装された既存システムをPython（Flask）とReact（TypeScript）にリプレイス。<br/>システムの設計から実装、インフラ構築、CI/CDパイプラインの構築、アプリケーションの監視までを一貫して行った。
+
+### 【内容】
+サービス品質向上のため、バックエンドとフロントエンドの全面的なリプレイスを行い、インフラも刷新。<br/>API仕様書の作成、クラス設計、ログ設計、例外設計、AWS構成の設計を実施し、CI/CDパイプラインと監視システムを構築。
+
+### 【課題・問題点】
+既存システムは保守性が低く、新機能追加やバグ修正が困難だった。<br/>また、監視機能が不十分で、サービス障害発生時の対応が遅れる可能性があった。不要な機能も多く含まれていた。
+
+### 【使用した技術】
+- **設計**
+  - **API仕様書**: OpenAPIを使用して詳細なAPI仕様書を作成。
+  - **クラス設計**: 再利用性と保守性を高めるためのクラス設計を実施。
+  - **ログ設計**: 問題発生時の迅速な対応を可能にするための詳細なログ設計を行う。
+  - **例外設計**: 予期しないエラー発生時の安定性を確保するための例外処理設計を実施。
+  - **AWS構成の設計**: 可用性とスケーラビリティを考慮したAWSインフラの設計を行う。
+- **開発**
+  - **バックエンド**: Python（Flask）を用いて構築。
+  - **フロントエンド**: React（TypeScript）を用いて実装。
+- **インフラ**: Dockerを用いて環境構築を行い、AWSでインフラを構築。
+- **CI/CD**: GitHub Actionsを使用してCI/CDパイプラインを構築。
+- **監視**: MackerelとDatadogを利用して、アプリケーションとインフラの監視を実装。
+
+### 【成果】
+- システム保守の効率化と品質向上を達成。
+- 自動化されたデプロイによりリリースサイクルを短縮。
+- 不要な機能を削減し、システムのシンプル化と効率化を実現。
+- リアルタイムの監視体制により、将来の障害発生時の対応時間を大幅に短縮できる見込み。
+
+# 使用技術（まとめ）
+- **プログラミング言語**: Python, TypeScript
+- **フレームワーク**: Flask, React
+- **データベース**: PostgreSQL
+- **インフラ**: AWS
+- **コンテナ**: Docker
+- **CI/CD**: GitHub Actions
+- **バージョン管理**: Git, GitHub
+- **監視ツール**: Mackerel, Datadog
+- **その他ツール**: Twillo
 </details>
 
----
+<details>
+  <summary>
+    リダイレクタの運用・既存改修
+    <span>2023年/12ヶ月</span>
+  </summary>
+  <div>
+    <ul>
+      <li><strong>カテゴリ:</strong> <span>webサービス<span> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>フロントエンド</span> <span>インフラ</span></li>
+      <li><strong>使用技術:</strong> PHP Perl AWS Apache GitHub PostgreSQL</li>
+  </div>
+
+# プロジェクト概要
+リダイレクタの運用・既存改修
+
+# チーム情報
+チーム人数：1名
+
+# 開発・実装内容A
+### 【概要】
+廃止予定だったレガシーシステムの継続運用と既存改修を担当。<br/>管理画面の不具合改修、システム設計図の記述、インフラやミドルウェアの改修を行った。
+
+### 【内容】
+システムの安定運用と機能改善を目的とし、管理画面の不具合修正とAWSの不要リソース削除を行った。<br/>また、draw.ioの導入によりドキュメント管理を効率化。
+
+### 【課題・問題点】
+- 既存の引き継ぎ資料がなく、システムの全貌が把握できなかった。
+- 廃止予定だったため、保守性が低い状態で運用されていた。
+- 検証環境が動作していない問題があった。
+
+### 【使用した技術】
+- **システム設計図の記述**: ER図、シーケンス図、画面遷移図、インフラ構成図を作成し、システム全体の把握を実施。
+- **管理画面の不具合改修**: PerlとPHPを使用してバグを修正。
+- **インフラの改修**: 不要なリソースの削除とApacheの設定変更を行い、検証環境を復旧。
+- **ドキュメント管理**: draw.ioを導入し、ドキュメント管理の効率化を実現。
+
+### 【成果】
+- システムの全体像を把握し、安定運用が可能となった。
+- 管理画面の不具合を修正し、ユーザー体験を向上。
+- 不要リソースの削減により、運用コストを削減。
+- draw.ioの導入により、ドキュメント管理のコストを低減。
+
+# 開発・実装内容B
+### 【概要】
+DBのアップグレード対応やミドルウェア（Apache）の設定変更などの運用業務を実施。
+
+### 【内容】
+サービスの継続運用のため、PostgreSQLのアップグレードやApacheの設定変更を行い、システムの安定性とパフォーマンスを向上させた。
+
+### 【課題・問題点】
+- システムの継続運用に伴い、DBのバージョンアップが必要だった。
+- Apacheの設定が適切でなく、検証環境が動作していなかった。
+
+### 【使用した技術】
+- **DBのアップグレード**: PostgreSQLのバージョンアップを実施し、その手順書を作成。
+- **Apacheの設定変更**: 検証環境が正しく動作するよう、Apacheの設定を見直し、最適化。
+- **インフラ改修**: AWS上でインフラ構成の見直しと改修を実施。
+
+### 【成果】
+- PostgreSQLのバージョンアップにより、データベースのパフォーマンスとセキュリティを向上。
+- 検証環境を復旧し、開発およびテストの効率を改善。
+- AWS上のインフラ改修により、システムの安定性を向上。
+
+# 使用技術（まとめ）
+- **プログラミング言語**: Perl, PHP
+- **データベース**: PostgreSQL
+- **インフラ**: AWS
+- **ウェブサーバー**: Apache
+- **バージョン管理**: Git, GitHub
+- **監視ツール**: Mackerel, Twillo
+- **ドキュメント管理ツール**: draw.io
+</details>
+
+<details>
+  <summary>
+    画像変換サーバの新機能追加と負荷試験
+    <span>2023年/3ヶ月</span>
+  </summary>
+  <div>
+    <ul>
+      <li><strong>カテゴリ:</strong> <span>webサービス<span> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
+      <li><strong>使用技術:</strong> Java Spring Boot shell script AWS PostgreSQL Datadog Docker CI/CD E2E GitHub GitHub Actions API</li>
+  </div>
+</details>
+
+<details>
+  <summary>
+    画像変換サーバの新インターフェース(IF)追加
+    <span>2023年/3ヶ月</span>
+  </summary>
+  <div>
+    <ul>
+      <li><strong>カテゴリ:</strong> <span>webサービス<span> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
+      <li><strong>使用技術:</strong> Java Spring Boot PostgreSQL Docker Datadog GitHub GitHub Actions Terraform CI/CD AWS E2E</li>
+  </div>
+</details>
+
+<details>
+  <summary>
+    画像変換サーバのリプレイス
+    <span>2023年/12ヶ月</span>
+  </summary>
+  <div>
+    <ul>
+      <li><strong>カテゴリ:</strong> <span>webサービス<span> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
+      <li><strong>使用技術:</strong> Spring Boot Java AWS Datadog Docker GitHub GitHub Actions PostgreSQL JUnit Terraform CI/CD E2E</li>
+  </div>
+</details>
+
+<details>
+  <summary>
+    決済システムの新インターフェース(IF)追加と運用改善・負荷試験
+    <span>2022年/6ヶ月</span>
+  </summary>
+  <div>
+    <ul>
+      <li><strong>カテゴリ:</strong> <span>webサービス<span> <span>自社</li>
+      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
+      <li><strong>使用技術:</strong> Java Spring Boot PostgreSQL AWS CI/CD Datadog Docker GitHub GitHub Actions Terraform shell script Git SQL</li>
+  </div>
+</details>
+
+<details>
+  <summary>
+    社内研修
+    <span>2022年/6ヶ月</span>
+  </summary>
+  <div>
+    <ul>
+      <li><strong>カテゴリ:</strong> <span>その他</span></li>
+      <li><strong>担当工程:</strong> <span>その他</span></li>
+      <li><strong>職種・役割:</strong> <span>その他</span></li>
+      <li><strong>使用技術:</strong> <span>PHP</span></li>
+  </div>
+
+# プロジェクト概要
+社内研修
+
+## 内容
+- 研修
+- 個人開発演習
+- チーム開発演習
+
+## 習得スキル
+・Webアプリケーション開発における技術
+・セキュリティの知識
+・ネットワークに関する知識
+・サーバに関する知識
+
+## コメント
+社内研修を通じて、Webアプリケーション開発に必要な技術を一通り学習しました。これにより、実務にスムーズに移行するための基礎を確立することができました。研修では個人開発とチーム開発の両方を経験し、実際のプロジェクトでの作業フローや協力の重要性を理解しました。
+
+## 学習した技術
+- **Web開発フロントエンド**: HTML, CSS, JavaScript
+- **Web開発バックエンド**: PHP, Java, Kotlin, Swift
+- **データベース**: MySQL
+- **クラウドプラットフォーム**: AWS
+- **フレームワーク**: Laravel, SwiftUI
+- **Webサーバ**: Apache, Nginx
+- **バージョン管理**: Git, GitHub
+
+これらのスキルセットにより、開発の各フェーズで必要な知識と技術を習得し、セキュリティやネットワーク、サーバ管理に関する理解を深めました。
+</details>
 
 ## スキルレベル
 
-| 環境                | 実務経験        | 実務以外の利用 |
-|---------------------|-----------------|----------------|
-| Java                | 3年            | -              |
-| PHP                 | 2年            | -              |
-| Python              | 2年            | -              |
-| TypeScript          | 1年            | -              |
-| AWS（Linux）        | 3年            | -              |
-| PostgreSQL          | 3年            | -              |
-| MySQL               | 2年            | -              |
-
----
+|      | 環境                | 実務経験        | 実務以外の利用 |
+|------|---------------------|-----------------|----------------|
+| 言語 | Java                | 3年             | -              |
+|      | PHP                 | 2年             | -              |
+|      | Python              | 2年             | -              |
+|      | Go                  | -               | 1年            |
+|      | JavaScript（React） | 2年             | -              |
+|      | TypeScript          | 1年             | -              |
+| FW   | Spring Boot         | 3年             | -              |
+|      | Flask               | 2年             | -              |
+|      | Nect.js             | -               | 1年            |
+| OS   | AWS（Linux）        | 3年             | -              |
+| DB   | PostgreSQL          | 3年             | -              |
+|      | MySQL               | 2年             | -              |
+|      | DynamoDB            | 1年             | -              |
 
 ## 自己PR
 
@@ -142,3 +495,5 @@ O/S
 Java、Python、TypeScriptを用いたバックエンド・フロントエンド開発や、AWS、Docker、Terraformによるインフラ構築の経験があります。特に、一人でシステムを担当した経験から、プロジェクト全体を見渡し、効率的にタスクを遂行する能力を持っています。
 
 ---
+
+Last Updated: January 5, 2025

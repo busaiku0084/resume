@@ -1,0 +1,50 @@
+/* markdown-style.css */
+
+/* detailsタグのスタイル */
+details {
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* summaryタグ内のスタイル */
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* summary内のspanタグ */
+summary span {
+  display: block;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+}
+
+/* ulタグのスタイル */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* liタグのスタイル */
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* li内のspanタグ */
+li span {
+  display: inline-block;
+  font-size: 0.9rem;
+  border: 1px solid #aad1d1;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+/* divタグのマージン */
+div {
+  margin-top: 0.5rem;
+}

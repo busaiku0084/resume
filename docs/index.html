@@ -24,20 +24,14 @@
       return response.text();
     })
     .then(md => {
-      // 全体のMarkdownをレンダリング
       document.getElementById('content').innerHTML = marked.parse(md);
-
-      // <details>内のすべての .markdown-content をレンダリング
       document.querySelectorAll('.markdown-content').forEach((content) => {
         const rawMarkdown = content.textContent.trim();
-
         content.innerHTML = marked.parse(rawMarkdown);
-
         content.querySelectorAll('ul').forEach((ul) => {
           ul.style.listStyle = 'disc';
           ul.style.paddingLeft = '1.5rem';
         });
-
         content.querySelectorAll('li').forEach((li) => {
           li.style.marginBottom = '0.5rem';
         });

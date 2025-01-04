@@ -16,7 +16,7 @@ GitHub Pagesで公開されています。以下のURLからアクセス可能�
 以下のコマンドを実行して、ローカルサーバーを起動します。
 
 ```bash
-cd ./doc
+cd ./docs
 browser-sync start --server --files "**/*"
 ```
 

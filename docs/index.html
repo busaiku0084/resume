@@ -9,43 +9,43 @@
   <link rel="stylesheet" href="markdown-style.css">
 </head>
 <body>
-  <header>
-    <h1>職務経歴書</h1>
-    <p>Professional Resume</p>
-  </header>
-  <article id="content" class="markdown-body"></article>
-  <footer>
-    © 2025 All rights reserved. Created by <a href="https://github.com/busaiku0084" target="_blank">busaiku0084</a>.
-  </footer>
-  <script>
-    fetch('./resume.md')
-      .then(response => {
-        if (!response.ok) throw new Error('Markdown file not found');
-        return response.text();
-      })
-      .then(md => {
-        // 全体のMarkdownをレンダリング
-        document.getElementById('content').innerHTML = marked.parse(md);
+<header>
+  <h1>職務経歴書</h1>
+  <p>Professional Resume</p>
+</header>
+<article id="content" class="markdown-body"></article>
+<footer>
+  © 2025 All rights reserved. Created by <a href="https://github.com/busaiku0084" target="_blank">busaiku0084</a>.
+</footer>
+<script>
+  fetch('./resume.md')
+    .then(response => {
+      if (!response.ok) throw new Error('Markdown file not found');
+      return response.text();
+    })
+    .then(md => {
+      // 全体のMarkdownをレンダリング
+      document.getElementById('content').innerHTML = marked.parse(md);
 
-        // <details>内のすべての .markdown-content をレンダリング
-        document.querySelectorAll('.markdown-content').forEach((content) => {
-          const rawMarkdown = content.textContent.trim();
+      // <details>内のすべての .markdown-content をレンダリング
+      document.querySelectorAll('.markdown-content').forEach((content) => {
+        const rawMarkdown = content.textContent.trim();
 
-          content.innerHTML = marked.parse(rawMarkdown);
+        content.innerHTML = marked.parse(rawMarkdown);
 
-          content.querySelectorAll('ul').forEach((ul) => {
-            ul.style.listStyle = 'disc';
-            ul.style.paddingLeft = '1.5rem';
-          });
-
-          content.querySelectorAll('li').forEach((li) => {
-            li.style.marginBottom = '0.5rem';
-          });
+        content.querySelectorAll('ul').forEach((ul) => {
+          ul.style.listStyle = 'disc';
+          ul.style.paddingLeft = '1.5rem';
         });
-      })
-      .catch(error => {
-        document.getElementById('content').innerHTML = `<p>エラー: ${error.message}</p>`;
+
+        content.querySelectorAll('li').forEach((li) => {
+          li.style.marginBottom = '0.5rem';
+        });
       });
-  </script>
+    })
+    .catch(error => {
+      document.getElementById('content').innerHTML = `<p>エラー: ${error.message}</p>`;
+    });
+</script>
 </body>
 </html>

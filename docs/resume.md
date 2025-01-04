@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>名前</th>
-    <td>Shunto Ohashi</td>
+    <td>s.ohashi</td>
   </tr>
   <tr>
     <th>専門領域</th>

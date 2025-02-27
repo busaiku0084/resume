@@ -55,7 +55,7 @@
     <tr>
       <td>2024年10月〜現在</td>
       <td>正社員（A社）</td>
-      <td>電力市場分析配信サービス</td>
+      <td>電力市場価格配信サービス</td>
     </tr>
     <tr>
       <td>2022年4月〜2024年9月</td>
@@ -69,6 +69,7 @@
 
 ### 正社員（A社）
 
+<div class="html-content"></div>
 <div class="html-content"></div>
 <div class="html-content"></div>
 

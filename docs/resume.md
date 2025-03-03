@@ -31,8 +31,8 @@
     <th>連絡先</th>
     <td>
       <ul>
-        <li>ohhacy@gmail.com</li>
-        <li>https://www.facebook.com/profile.php?id=100043416160150&locale=ja_JP</li>
+        <li><a href="ohhacy@gmail.com">ohhacy@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100043416160150&locale=ja_JP">facebook</a></li>
       </ul>
     </td>
   </tr>

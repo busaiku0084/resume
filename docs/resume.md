@@ -32,7 +32,7 @@
     <td>
       <ul>
         <li><a href="mailto:ohhacy@gmail.com">ohhacy@gmail.com</a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100043416160150&locale=ja_JP">Facebook</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100043416160150&locale=ja_JP" target=”_blank”>Facebook</a></li>
       </ul>
     </td>
   </tr>

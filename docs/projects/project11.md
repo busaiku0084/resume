@@ -1,7 +1,7 @@
 <details>
   <summary>
     電力市場価格配信のパフォーマンスチューニング
-    <span>2024-2025年/進行中</span>
+    <span>2025年/4ヶ月 (進行中)</span>
   </summary>
   <div>
     <ul>

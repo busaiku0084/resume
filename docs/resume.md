@@ -11,7 +11,7 @@
   </tr>
   <tr>
     <th>経験年数</th>
-    <td>3年</td>
+    <td>4年目</td>
   </tr>
   <tr>
     <th>興味分野</th>
@@ -31,7 +31,6 @@
     <th>連絡先</th>
     <td>
       <ul>
-        <li><a href="mailto:ohhacy@gmail.com">ohhacy@gmail.com</a></li>
         <li><a href="https://www.facebook.com/profile.php?id=100043416160150&locale=ja_JP" target=”_blank”>Facebook</a></li>
       </ul>
     </td>
@@ -74,6 +73,7 @@
 
 ### 正社員（A社）
 
+<div class="html-content"></div>
 <div class="html-content"></div>
 <div class="html-content"></div>
 <div class="html-content"></div>
@@ -123,7 +123,7 @@
       <td>1年</td>
     </tr>
     <tr>
-      <td>JavaScript(React)</td>
+      <td>JavaScript</td>
       <td>2年</td>
       <td>-</td>
     </tr>
@@ -150,7 +150,7 @@
     </tr>
     <tr>
       <td rowspan="1">OS</td>
-      <td>AWS(Linux)</td>
+      <td>AWS(Amazon Linux2, 2023)</td>
       <td>3年</td>
       <td>-</td>
     </tr>
@@ -183,4 +183,4 @@
 
 ---
 
-Last Updated: January 5, 2025
+Last Updated: April 8, 2025

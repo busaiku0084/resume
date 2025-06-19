@@ -9,9 +9,10 @@
       <li><strong>担当工程:</strong> <span>要件定義</span> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
       <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>フロントエンド</span> <span>インフラ</span></li>
       <li><strong>使用技術:</strong> <span>AWS</span> <span>CI/CD</span> <span>Docker</span> <span>Git</span> <span>PHP</span> <span>WordPress</span></li>
+    </ul>
   </div>
   <div class="markdown-content">
-  
+
 ## プロジェクト概要
 
 コーポレートサイト（WordPress）のEC2からFargate移行

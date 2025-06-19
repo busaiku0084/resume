@@ -9,6 +9,7 @@
       <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
       <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
       <li><strong>使用技術:</strong> <span>Java</span> <span>Spring Boot</span> <span>PostgreSQL</span> <span>Docker</span> <span>Datadog</span> <span>GitHub</span> <span>AWS</span> <span>SQL</span></li>
+    </ul>
   </div>
   <div class="markdown-content">
 
@@ -70,10 +71,12 @@ Taurusを用いて新IFの負荷試験を実施し、システムのパフォー
 - **パフォーマンス最適化**: 負荷試験結果に基づき、環境変数の調整やインフラ設定値の変更を行い、システム効率を向上。
 
 ### 【成果】
+
 - 新IFの高負荷対応を確認し、システムの信頼性を確保。
 - パフォーマンス最適化により、システム全体の効率と安定性が向上。
 
 ## 使用技術（まとめ）
+
 - **プログラミング言語**: Java, Shell Script
 - **データベース**: PostgreSQL
 - **インフラ**: AWS

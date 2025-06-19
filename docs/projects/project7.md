@@ -9,6 +9,7 @@
       <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
       <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>フロントエンド</span> <span>インフラ</span></li>
       <li><strong>使用技術:</strong> <span>Python</span> <span>Flask</span> <span>TypeScript</span> <span>React</span> <span>AWS</span> <span>Docker</span> <span>GitHub</span> <span>GitHub Actions</span> <span>Datadog</span> <span>CI/CD</span> <span>API</span> <span>PostgreSQL</span></li>
+    </ul>
   </div>
   <div class="markdown-content">
 

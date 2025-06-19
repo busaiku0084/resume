@@ -1,4 +1,3 @@
-
 <details>
   <summary>
     社内研修
@@ -10,6 +9,7 @@
       <li><strong>担当工程:</strong> <span>その他</span></li>
       <li><strong>職種・役割:</strong> <span>その他</span></li>
       <li><strong>使用技術:</strong> <span>PHP</span></li>
+    </ul>
   </div>
   <div class="markdown-content">
 

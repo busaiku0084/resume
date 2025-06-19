@@ -1,21 +1,21 @@
 <details>
   <summary>
-    新規データパイプラインの構築とBIツール連携
+    外部向けAPIリプレイスおよびデータ配信基盤の最適化
     <span>2025年/3ヶ月</span>
   </summary>
   <div>
     <ul>
-      <li><strong>カテゴリ:</strong> <span>webサービス</span> <span>自社</span></li>
-      <li><strong>担当工程:</strong> <span>実装</span> <span>テスト</span> <span>運用/保守</span></li>
+      <li><strong>カテゴリ:</strong> <span>自社</span></li>
+      <li><strong>担当工程:</strong> <span>要件定義</span> <span>設計</span> <span>実装</span> <span>テスト</span> <span>運用/保守</span></li>
       <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
-      <li><strong>使用技術:</strong> <span>AWS</span> <span>CI/CD</span> <span>AWS Glue</span> <span>AWS RedShift</span> <span>Tableau</span></li>
+      <li><strong>使用技術:</strong> <span>Python</span> <span>AWS Lambda</span> <span>AWS Step Function</span> <span>Amazon S3</span> <span>Amazon Redshift</span> <span>Git</span> <span>Glue</span> <span>Amazon Athena</span> <span>Cloud Formation</span> <span>Tableau</span></li>
     </ul>
   </div>
   <div class="markdown-content">
 
 ## プロジェクト概要
 
-新規データパイプラインの構築とBIツール連携
+外部向けAPIリプレイスおよびデータ配信基盤の最適化
 
 ## チーム情報
 

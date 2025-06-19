@@ -9,9 +9,10 @@
       <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span></li>
       <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
       <li><strong>使用技術:</strong> <span>AWS</span> <span>API</span> <span>SQL</span> <span>Git</span> <span>Java</span> <span>Spring Boot</span> <span>JUnit</span></li>
+    </ul>
   </div>
   <div class="markdown-content">
-  
+
 ## プロジェクト概要
 
 集計システムのJava7からJava8対応

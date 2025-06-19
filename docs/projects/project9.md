@@ -9,9 +9,10 @@
       <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span></li>
       <li><strong>職種・役割:</strong> <span>バックエンド</span></li>
       <li><strong>使用技術:</strong> <span>AWS</span> <span>Docker</span> <span>Git</span> <span>Python</span></li>
+    </ul>
   </div>
   <div class="markdown-content">
-  
+
 ## プロジェクト概要
 
 社内ツールの作成（電力市場価格データ加工ツール）

@@ -9,6 +9,7 @@
       <li><strong>担当工程:</strong> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
       <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
       <li><strong>使用技術:</strong> <span>Java</span> <span>Spring Boot</span> <span>PostgreSQL</span> <span>Docker</span> <span>Datadog</span> <span>GitHub</span> <span>GitHub Actions</span> <span>Terraform</span> <span>CI/CD</span> <span>AWS</span> <span>E2E</span></li>
+    </ul>
   </div>
   <div class="markdown-content">
 

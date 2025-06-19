@@ -14,6 +14,10 @@
     <td>4年目</td>
   </tr>
   <tr>
+    <th>GitHub</th>
+    <td><a href="https://github.com/busaiku0084" target="_blank">https://github.com/busaiku0084</a></td>
+  </tr>
+  <tr>
     <th>興味分野</th>
     <td>
       <ul>
@@ -26,14 +30,6 @@
   <tr>
     <th>保有資格</th>
     <td>-</td>
-  </tr>
-  <tr>
-    <th>連絡先</th>
-    <td>
-      <ul>
-        <li><a href="https://www.facebook.com/profile.php?id=100043416160150&locale=ja_JP" target=”_blank”>Facebook</a></li>
-      </ul>
-    </td>
   </tr>
 </table>
 
@@ -77,6 +73,7 @@
 <div class="html-content"></div>
 <div class="html-content"></div>
 <div class="html-content"></div>
+<div class="html-content"></div>
 
 ### 正社員（B社）
 
@@ -97,13 +94,19 @@
       <th></th>
       <th>環境</th>
       <th>実務経験</th>
-      <th>実務以外の利用</th>
+      <th>実務以外の経験</th>
     </tr>
   </thead>
   <tbody>
+    <!-- 言語 -->
     <tr>
-      <td rowspan="6">言語</td>
+      <td rowspan="5">言語</td>
       <td>Java</td>
+      <td>3年</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Python</td>
       <td>3年</td>
       <td>-</td>
     </tr>
@@ -113,8 +116,8 @@
       <td>-</td>
     </tr>
     <tr>
-      <td>Python</td>
-      <td>2年</td>
+      <td>TypeScript</td>
+      <td>1年</td>
       <td>-</td>
     </tr>
     <tr>
@@ -122,16 +125,7 @@
       <td>-</td>
       <td>1年</td>
     </tr>
-    <tr>
-      <td>JavaScript</td>
-      <td>2年</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>TypeScript</td>
-      <td>1年</td>
-      <td>-</td>
-    </tr>
+    <!-- FW -->
     <tr>
       <td rowspan="3">FW</td>
       <td>Spring Boot</td>
@@ -148,12 +142,14 @@
       <td>-</td>
       <td>1年</td>
     </tr>
+    <!-- OS -->
     <tr>
       <td rowspan="1">OS</td>
-      <td>AWS(Amazon Linux2, 2023)</td>
+      <td>AWS (Amazon Linux2, 2023)</td>
       <td>3年</td>
       <td>-</td>
     </tr>
+    <!-- DB -->
     <tr>
       <td rowspan="3">DB</td>
       <td>PostgreSQL</td>
@@ -162,12 +158,63 @@
     </tr>
     <tr>
       <td>MySQL</td>
-      <td>2年</td>
+      <td>3年</td>
       <td>-</td>
     </tr>
     <tr>
       <td>DynamoDB</td>
       <td>1年</td>
+      <td>-</td>
+    </tr>
+    <!-- インフラ -->
+    <tr>
+      <td rowspan="5">インフラ</td>
+      <td>AWS (S3, Lambda, RDS, etc)</td>
+      <td>3年</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>ECS (Fargate)</td>
+      <td>2年</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Docker / Docker Compose</td>
+      <td>3年</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Terraform</td>
+      <td>2年</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CloudFormation</td>
+      <td>1年</td>
+      <td>-</td>
+    </tr>
+    <!-- CI/CD -->
+    <tr>
+      <td rowspan="2">CI/CD</td>
+      <td>GitHub Actions</td>
+      <td>2年</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>AWS CodePipeline / CodeBuild</td>
+      <td>1年</td>
+      <td>-</td>
+    </tr>
+    <!-- 監視 -->
+    <tr>
+      <td rowspan="2">監視</td>
+      <td>Datadog</td>
+      <td>2年</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Mackerel</td>
+      <td>2年</td>
       <td>-</td>
     </tr>
   </tbody>
@@ -183,4 +230,4 @@
 
 ---
 
-Last Updated: April 8, 2025
+Last Updated: June 10, 2025

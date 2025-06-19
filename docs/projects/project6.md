@@ -9,6 +9,7 @@
       <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
       <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>フロントエンド</span> <span>インフラ</span></li>
       <li><strong>使用技術:</strong> <span>PHP</span> <span>Perl</span> <span>AWS</span> <span>Apache</span> <span>GitHub</span> <span>PostgreSQL</span></li>
+    </ul>
   </div>
   <div class="markdown-content">
 

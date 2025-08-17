@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>名前</th>
-    <td>Shunto Ohashi</td>
+    <td>s-ohashi</td>
   </tr>
   <tr>
     <th>専門領域</th>
@@ -48,24 +48,33 @@
     <tr>
       <th>期間</th>
       <th>勤務形態</th>
-      <th>備考</th>
+      <th>業界・事業</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>2025年7月〜現在</td>
+      <td>業務委託</td>
+      <td>受託</td>
+    </tr>
+    <tr>
       <td>2024年10月〜現在</td>
       <td>正社員（A社）</td>
-      <td>電力市場価格配信サービス</td>
+      <td>電力市場・卸電力取引</td>
     </tr>
     <tr>
       <td>2022年4月〜2024年9月</td>
       <td>正社員（B社）</td>
-      <td>音楽配信サービス</td>
+      <td>音楽配信・ソリューション</td>
     </tr>
   </tbody>
 </table>
 
 ## 開発経歴
+
+### 業務委託
+
+<div class="html-content"></div>
 
 ### 正社員（A社）
 
@@ -230,4 +239,4 @@
 
 ---
 
-Last Updated: June 10, 2025
+Last Updated: August 18, 2025

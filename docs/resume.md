@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>名前</th>
-    <td>s-ohashi</td>
+    <td>ohashi</td>
   </tr>
   <tr>
     <th>専門領域</th>
@@ -11,7 +11,7 @@
   </tr>
   <tr>
     <th>経験年数</th>
-    <td>4年目</td>
+    <td>4年</td>
   </tr>
   <tr>
     <th>GitHub</th>
@@ -54,7 +54,7 @@
   <tbody>
     <tr>
       <td>2025年7月〜現在</td>
-      <td>業務委託</td>
+      <td>業務委託（副業）</td>
       <td>受託</td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@
     </tr>
     <tr>
       <td>PHP</td>
-      <td>2年</td>
+      <td>3年</td>
       <td>-</td>
     </tr>
     <tr>
@@ -155,7 +155,7 @@
     <tr>
       <td rowspan="1">OS</td>
       <td>AWS (Amazon Linux2, 2023)</td>
-      <td>3年</td>
+      <td>4年</td>
       <td>-</td>
     </tr>
     <!-- DB -->
@@ -179,7 +179,7 @@
     <tr>
       <td rowspan="5">インフラ</td>
       <td>AWS (S3, Lambda, RDS, etc)</td>
-      <td>3年</td>
+      <td>4年</td>
       <td>-</td>
     </tr>
     <tr>
@@ -189,7 +189,7 @@
     </tr>
     <tr>
       <td>Docker / Docker Compose</td>
-      <td>3年</td>
+      <td>4年</td>
       <td>-</td>
     </tr>
     <tr>
@@ -239,4 +239,4 @@
 
 ---
 
-Last Updated: August 18, 2025
+Last Updated: October 1, 2025

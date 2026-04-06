@@ -143,17 +143,15 @@
 ## 開発経歴
 
 <%
-const companyGroups = [
-  { label: '業務委託・副業', companies: ['業務委託'] },
-  { label: '株式会社MPX', companies: ['株式会社MPX'] },
-  { label: '株式会社レコチョク', companies: ['株式会社レコチョク'] }
-];
-companyGroups.forEach(function(group) {
-  const groupProjects = projects.filter(p => group.companies.includes(p.company));
+const companyOrder = career.entries.map(e => e.company);
+const seen = new Set();
+const companyGroups = companyOrder.filter(c => { if (seen.has(c)) return false; seen.add(c); return true; });
+companyGroups.forEach(function(company) {
+  const groupProjects = projects.filter(p => p.company === company);
   if (groupProjects.length === 0) return;
 -%>
 
-### <%= group.label %>
+### <%= company %>
 
 <table>
   <thead>

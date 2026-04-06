@@ -3,9 +3,12 @@
   "version": "2.0.0",
   "description": "YAML駆動の職務経歴書管理システム",
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.js --public",
+    "build:private": "node scripts/build.js",
     "build:pdf": "node scripts/build-pdf.js",
+    "build:pdf:public": "node scripts/build-pdf.js --public",
     "dev": "npm run build && cd docs && browser-sync start --server --files '**/*'",
+    "dev:private": "npm run build:private && cd docs && browser-sync start --server --files '**/*'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -1,36 +1,18 @@
 const fs = require('fs');
 const path = require('path');
-const yaml = require('js-yaml');
 const ejs = require('ejs');
 const { mdToPdf } = require('md-to-pdf');
+const { loadData, isPublicMode } = require('./load-data');
 
 const ROOT = path.resolve(__dirname, '..');
-const DATA_DIR = path.join(ROOT, 'data');
 const TEMPLATES_DIR = path.join(ROOT, 'templates');
 const OUTPUT_DIR = path.join(ROOT, 'output');
 
-function loadYaml(filePath) {
-  return yaml.load(fs.readFileSync(filePath, 'utf8'));
-}
-
-function loadProjects() {
-  const projectsDir = path.join(DATA_DIR, 'projects');
-  const files = fs.readdirSync(projectsDir)
-    .filter(f => f.endsWith('.yaml'))
-    .sort();
-  return files.map(f => loadYaml(path.join(projectsDir, f)));
-}
-
 async function main() {
-  // Load data
-  const profile = loadYaml(path.join(DATA_DIR, 'profile.yaml'));
-  const pr = loadYaml(path.join(DATA_DIR, 'pr.yaml'));
-  const career = loadYaml(path.join(DATA_DIR, 'career.yaml'));
-  const skills = loadYaml(path.join(DATA_DIR, 'skills.yaml'));
-  const education = loadYaml(path.join(DATA_DIR, 'education.yaml'));
-  const projects = loadProjects().sort((a, b) => b.id.localeCompare(a.id));
+  const publicMode = isPublicMode(process.argv);
+  const data = loadData(publicMode);
 
-  const data = { profile, pr, career, skills, education, projects };
+  console.log(`PDF mode: ${publicMode ? 'public (会社名非表示)' : 'private (会社名表示)'}`);
 
   // Generate PDF markdown
   const pdfTemplate = fs.readFileSync(
@@ -42,7 +24,8 @@ async function main() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
   // Convert to PDF
-  const pdfPath = path.join(OUTPUT_DIR, 'resume.pdf');
+  const suffix = publicMode ? '-public' : '';
+  const pdfPath = path.join(OUTPUT_DIR, `resume${suffix}.pdf`);
   const pdf = await mdToPdf(
     { content: pdfMd },
     {

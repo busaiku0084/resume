@@ -1,10 +1,13 @@
 entries:
   - period: "2025年7月〜現在"
     company: "業務委託（副業）"
+    public_name: "業務委託（副業）"
     industry: "受託"
   - period: "2024年10月〜現在"
     company: "株式会社MPX"
+    public_name: "正社員（A社）"
     industry: "電力市場・卸電力取引"
   - period: "2022年4月〜2024年9月"
     company: "株式会社レコチョク"
+    public_name: "正社員（B社）"
     industry: "音楽配信・ソリューション"

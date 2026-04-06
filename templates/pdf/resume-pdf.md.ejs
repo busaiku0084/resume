@@ -145,15 +145,20 @@
 ## 開発経歴
 
 <%
+const labelMap = {};
+career.entries.forEach(e => { if (!labelMap[e.company]) labelMap[e.company] = e.employment_type || e.company; });
 const companyOrder = career.entries.map(e => e.company);
 const seen = new Set();
 const companyGroups = companyOrder.filter(c => { if (seen.has(c)) return false; seen.add(c); return true; });
 companyGroups.forEach(function(company) {
   const groupProjects = projects.filter(p => p.company === company);
   if (groupProjects.length === 0) return;
+  const empType = labelMap[company];
+  const showCompany = company !== empType && company !== 'ー' && !empType.includes(company);
+  const label = empType + (showCompany ? '（' + company + '）' : '');
 -%>
 
-### <%= company %>
+### <%= label %>
 
 <table>
   <thead>

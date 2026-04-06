@@ -25,8 +25,8 @@
   <thead>
     <tr>
       <th>期間</th>
-      <th>勤務形態</th>
       <th>会社名</th>
+      <th>勤務形態</th>
       <th>業界・事業</th>
     </tr>
   </thead>
@@ -34,8 +34,8 @@
 <% career.entries.forEach(function(entry) { -%>
     <tr>
       <td><%= entry.period %></td>
-      <td><%= entry.employment_type %></td>
       <td><%= entry.company %></td>
+      <td><%= entry.employment_type %></td>
       <td><%= entry.industry %></td>
     </tr>
 <% }); -%>

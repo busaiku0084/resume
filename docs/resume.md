@@ -27,6 +27,7 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
   <thead>
     <tr>
       <th>期間</th>
+      <th>勤務形態</th>
       <th>会社名</th>
       <th>業界・事業</th>
     </tr>
@@ -35,16 +36,19 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
     <tr>
       <td>2025年7月〜現在</td>
       <td>業務委託（副業）</td>
+      <td>業務委託</td>
       <td>受託</td>
     </tr>
     <tr>
       <td>2024年10月〜現在</td>
-      <td>正社員（A社）</td>
+      <td>正社員</td>
+      <td>A社</td>
       <td>電力市場・卸電力取引</td>
     </tr>
     <tr>
       <td>2022年4月〜2024年9月</td>
-      <td>正社員（B社）</td>
+      <td>正社員</td>
+      <td>B社</td>
       <td>音楽配信・ソリューション</td>
     </tr>
   </tbody>
@@ -53,7 +57,11 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
 ## 開発経歴
 
 
-### 正社員（A社）
+### 業務委託
+
+<div class="html-content" data-project="project014"></div>
+
+### A社
 
 <div class="html-content" data-project="project013"></div>
 <div class="html-content" data-project="project012"></div>
@@ -61,7 +69,7 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
 <div class="html-content" data-project="project010"></div>
 <div class="html-content" data-project="project009"></div>
 
-### 正社員（B社）
+### B社
 
 <div class="html-content" data-project="project008"></div>
 <div class="html-content" data-project="project007"></div>

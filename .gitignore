@@ -1,6 +1,9 @@
 # OS
 .DS_Store
 
+# PDF output
+output/
+
 # Logs
 logs
 *.log

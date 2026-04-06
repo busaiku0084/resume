@@ -1,33 +1,30 @@
 <details>
   <summary>
     集計システムのJava7からJava8対応
-    <span>2024年/2ヶ月</span>
+    <span>2024年/3ヶ月</span>
   </summary>
   <div>
     <ul>
-      <li><strong>カテゴリ:</strong> <span>webサービス</span> <span>自社</span></li>
-      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span></li>
-      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span></li>
-      <li><strong>使用技術:</strong> <span>AWS</span> <span>API</span> <span>SQL</span> <span>Git</span> <span>Java</span> <span>Spring Boot</span> <span>JUnit</span></li>
+      <li><strong>カテゴリ:</strong> <span>Webサービス</span> <span>自社プロダクト</span> </li>
+      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用・保守</span> </li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>インフラ</span> </li>
+      <li><strong>使用技術:</strong> <span>Java</span> <span>Spring Boot</span> <span>AWS</span> <span>Amazon RedShift</span> <span>REST API</span> <span>SQL</span> <span>Git</span> <span>JUnit</span> </li>
     </ul>
   </div>
   <div class="markdown-content">
 
 ## プロジェクト概要
 
-集計システムのJava7からJava8対応
+Java7で動作していた既存の集計システムをJava8に移行。
+Spring BootやAuroraのバージョンアップも併せて対応し、システム全体のモダナイズを図った。
+
 
 ## チーム情報
 
 チーム人数：1名
 
+
 ## 開発・実装内容
-
-### 【概要】
-
-Java7で動作していた既存の集計システムをJava8に移行。<br/>Spring BootやAuroraのバージョンアップも併せて対応し、システム全体のモダナイズを図った。
-
-### 【内容】
 
 - **Javaのバージョンアップ**
   - Java7からJava8への移行に対応。
@@ -43,16 +40,18 @@ Java7で動作していた既存の集計システムをJava8に移行。<br/>Sp
   - Spring BootやAuroraのバージョンを最新安定版にアップデート。
   - Redshiftのクエリ最適化や互換性テストを実施し、集計処理のパフォーマンスを維持。
 
-### 【課題・問題点】
+
+## 課題・問題点
 
 - **バージョン互換性の課題**
-  - Java8移行時に発生したライブラリの非互換問題を解消。<br/>特にSpringBootやAuroraとの互換性調整が大きな課題だった。
+  - Java8移行時に発生したライブラリの非互換問題を解消。特にSpringBootやAuroraとの互換性調整が大きな課題だった。
 - **古い環境の運用負荷**
   - 業務委託者が使用していたWindows環境と、開発チームで使用するMac環境での設定が異なり、ドキュメントの再整備が必要だった。
 - **テスト基盤の移行**
   - JUnit4からJUnit5への移行に伴い、アノテーションやテスト設定の大幅な変更が必要だった。
 
-### 【工夫・思考プロセス】
+
+## 工夫・思考プロセス
 
 - **継続性を重視したドキュメント整備**
   - 将来的なJava17移行を見据え、詳細な手順書や考慮点を記載。
@@ -62,12 +61,14 @@ Java7で動作していた既存の集計システムをJava8に移行。<br/>Sp
 - **パフォーマンスと安定性の両立**
   - RedshiftやAuroraのバージョンアップに際して、既存クエリや設定が最適に動作するように細心の注意を払って対応。
 
-### 【成果】
+
+## 成果
 
 - Java8移行により、開発効率とシステム保守性が向上。
 - ドキュメントの整備により、後続作業（Java17移行）がスムーズに行える基盤を構築。
 - JUnit5への移行により、テストの拡張性と記述の簡潔化を実現。
 - ローカル環境の多様性に対応することで、チームメンバー間の環境差を解消。
+
 
 ## 使用技術（まとめ）
 
@@ -77,5 +78,6 @@ Java7で動作していた既存の集計システムをJava8に移行。<br/>Sp
 - **テストフレームワーク**: JUnit 4 → JUnit 5
 - **バージョン管理**: Git
 - **その他ツール**: IntelliJ IDEA, AWS CLI
+
   </div>
 </details>

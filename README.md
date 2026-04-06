@@ -1,46 +1,79 @@
 # resume
-このリポジトリは、職務経歴書を管理するためのものです。<br/>
-以下の手順でローカル環境での表示やフォーマットを確認できます。
+
+職務経歴書をYAMLデータ駆動で管理するリポジトリです。
+プロジェクト情報をYAMLで一元管理し、ビルドスクリプトでMarkdown/PDFを自動生成します。
 
 ## デプロイ先
-GitHub Pagesで公開されています。以下のURLからアクセス可能です。<br/>
+
+GitHub Pagesで公開されています。
 **URL**: [https://busaiku0084.github.io/resume](https://busaiku0084.github.io/resume)
 
-## ローカル環境でのプレビュー
-`browser-sync`を使用してローカルでプレビューできます。
+## プロジェクト構成
 
-### 必要なツール
-- **Node.js**（`npm`が含まれています）
-
-### 手順
-#### 1. ローカルサーバーの起動
-以下のコマンドを実行して、ローカルサーバーを起動します。
-
-```bash
-cd ./docs
-browser-sync start --server --files "**/*"
+```
+data/                  # データ層（YAML）
+├── profile.yaml       # 基本情報
+├── pr.yaml            # 自己PR
+├── career.yaml        # 職歴
+├── skills.yaml        # スキルセット
+├── education.yaml     # 学歴
+└── projects/          # 各プロジェクト（1ファイル=1プロジェクト）
+    ├── project001.yaml
+    └── ...
+templates/             # テンプレート（EJS）
+├── resume.md.ejs      # ブラウザ表示用
+├── project.md.ejs     # 個別プロジェクト用
+└── pdf/
+    └── resume-pdf.md.ejs  # PDF用
+scripts/               # ビルドスクリプト
+├── build.js           # YAML → MD 生成
+└── build-pdf.js       # YAML → PDF 生成
+docs/                  # 生成物（GitHub Pages公開用）
+output/                # PDF出力先（.gitignore対象）
 ```
 
-#### 2. ブラウザで確認
-自動的にブラウザが開き、`index.html`が表示されます。<br/>
-ファイルを保存すると、ブラウザが自動でリロードされます。
-
-## PrettierによるMarkdown整形
-Markdownファイルを整形するためにPrettierを使用します。
-
-### 手順
-#### 1. 整形の実行
-以下のコマンドで指定したMarkdownファイルを整形します。
+## セットアップ
 
 ```bash
-prettier --write README.md
+npm install
 ```
 
-複数のファイルを対象とする場合:
+## 使い方
+
+### ブラウザ表示用のMD生成
 
 ```bash
-prettier --write "**/*.md"
+npm run build
 ```
 
-#### 2. 設定ファイル
-カスタマイズする場合、プロジェクトのルートに `.prettierrc`を作成してください。
+`data/` のYAMLからMarkdownを生成し、`docs/` に出力します。
+
+### 提出用PDF生成
+
+```bash
+npm run build:pdf
+```
+
+`output/resume.pdf` にPDFを出力します。
+
+### ローカルプレビュー
+
+```bash
+npm run dev
+```
+
+MDを生成後、`browser-sync` でローカルサーバーを起動します。
+ファイル変更時に自動リロードされます。
+
+## プロジェクトの追加方法
+
+1. `data/projects/` に新しいYAMLファイルを追加（例: `project015.yaml`）
+2. `npm run build` を実行
+
+YAMLのフィールド構成については `CLAUDE.md` を参照してください。
+
+## 注意事項
+
+- `docs/` 配下のMDファイルは自動生成されます。直接編集しないでください
+- データの編集は `data/` のYAMLファイルに対して行ってください
+- `npm run build` 後にコミットしてください

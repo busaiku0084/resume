@@ -3,43 +3,23 @@
 <table>
   <tr>
     <th>名前</th>
-    <td>ohashi</td>
+    <td>大橋 駿斗</td>
   </tr>
   <tr>
     <th>専門領域</th>
-    <td>バックエンド開発 / クラウドインフラ構築</td>
-  </tr>
-  <tr>
-    <th>経験年数</th>
-    <td>4年</td>
+    <td>バックエンド開発、クラウドインフラ構築</td>
   </tr>
   <tr>
     <th>GitHub</th>
     <td><a href="https://github.com/busaiku0084" target="_blank">https://github.com/busaiku0084</a></td>
   </tr>
-  <tr>
-    <th>興味分野</th>
-    <td>
-      <ul>
-        <li>マイクロサービスアーキテクチャ</li>
-        <li>モダンな開発基盤の設計・構築（例: AWS、Docker、Kubernetes）</li>
-        <li>DevOpsの導入とCI/CDパイプラインの構築</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>保有資格</th>
-    <td>-</td>
-  </tr>
 </table>
 
 ## PR
 
-私は、Webアプリケーションの設計から開発、試験、運用までを一貫して担当してきました。リダイレクタのリプレイスや画像サーバの新機能追加、決済システムのインターフェース追加などのプロジェクトに携わり、システムの保守性や拡張性向上に貢献してきました。
+Webアプリケーションの設計から開発・運用まで一貫して担当してきました。バックエンド開発に加え、AWSやDockerを用いたインフラ構築、CI/CD導入にも取り組み、保守性と効率性の高い開発基盤を整備してきました。
+Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要件定義から参画することで、柔軟でスケーラブルなシステムを構築してきました。今後もバックエンドとクラウドの知見を活かして貢献したいと考えています。
 
-バックエンド開発を軸にクラウドインフラの設計・構築にも精通しており、AWSやDockerを活用した開発基盤の整備や、CI/CDの導入を通じたデプロイ環境の最適化を得意としています。要件定義から関与し、チームやクライアントと密に連携しながら柔軟でスケーラブルなシステムを構築してきました。
-
-技術スタックとしては、Java、Python、TypeScriptを用いた開発に加え、AWS、Docker、Terraformを活用したインフラ構築の経験があります。特に、システム全体を俯瞰し、効率的にタスクを遂行する能力を強みとしています。今後も、バックエンドとクラウドを活かしたシステム設計で貢献していきたいと考えています。
 
 ## キャリア
 
@@ -47,6 +27,7 @@
   <thead>
     <tr>
       <th>期間</th>
+      <th>会社名</th>
       <th>勤務形態</th>
       <th>業界・事業</th>
     </tr>
@@ -54,17 +35,26 @@
   <tbody>
     <tr>
       <td>2025年7月〜現在</td>
+      <td>ー</td>
       <td>業務委託（副業）</td>
       <td>受託</td>
     </tr>
     <tr>
-      <td>2024年10月〜現在</td>
-      <td>正社員（A社）</td>
+      <td>2026年4月〜現在</td>
+      <td>AI受託系企業</td>
+      <td>正社員</td>
+      <td>AI・受託開発</td>
+    </tr>
+    <tr>
+      <td>2024年10月〜2026年3月</td>
+      <td>電力系企業</td>
+      <td>正社員</td>
       <td>電力市場・卸電力取引</td>
     </tr>
     <tr>
       <td>2022年4月〜2024年9月</td>
-      <td>正社員（B社）</td>
+      <td>音楽配信系企業</td>
+      <td>正社員</td>
       <td>音楽配信・ソリューション</td>
     </tr>
   </tbody>
@@ -72,28 +62,29 @@
 
 ## 開発経歴
 
-### 業務委託
 
-<div class="html-content"></div>
+### 業務委託（副業）
 
-### 正社員（A社）
+<div class="html-content" data-project="project014"></div>
 
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
+### 正社員（電力系企業）
 
-### 正社員（B社）
+<div class="html-content" data-project="project013"></div>
+<div class="html-content" data-project="project012"></div>
+<div class="html-content" data-project="project011"></div>
+<div class="html-content" data-project="project010"></div>
+<div class="html-content" data-project="project009"></div>
 
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
-<div class="html-content"></div>
+### 正社員（音楽配信系企業）
+
+<div class="html-content" data-project="project008"></div>
+<div class="html-content" data-project="project007"></div>
+<div class="html-content" data-project="project006"></div>
+<div class="html-content" data-project="project005"></div>
+<div class="html-content" data-project="project004"></div>
+<div class="html-content" data-project="project003"></div>
+<div class="html-content" data-project="project002"></div>
+<div class="html-content" data-project="project001"></div>
 
 ## スキルレベル
 
@@ -107,7 +98,6 @@
     </tr>
   </thead>
   <tbody>
-    <!-- 言語 -->
     <tr>
       <td rowspan="5">言語</td>
       <td>Java</td>
@@ -121,7 +111,7 @@
     </tr>
     <tr>
       <td>PHP</td>
-      <td>3年</td>
+      <td>2年</td>
       <td>-</td>
     </tr>
     <tr>
@@ -134,7 +124,6 @@
       <td>-</td>
       <td>1年</td>
     </tr>
-    <!-- FW -->
     <tr>
       <td rowspan="3">FW</td>
       <td>Spring Boot</td>
@@ -151,14 +140,12 @@
       <td>-</td>
       <td>1年</td>
     </tr>
-    <!-- OS -->
     <tr>
       <td rowspan="1">OS</td>
       <td>AWS (Amazon Linux2, 2023)</td>
-      <td>4年</td>
+      <td>3年</td>
       <td>-</td>
     </tr>
-    <!-- DB -->
     <tr>
       <td rowspan="3">DB</td>
       <td>PostgreSQL</td>
@@ -175,11 +162,10 @@
       <td>1年</td>
       <td>-</td>
     </tr>
-    <!-- インフラ -->
     <tr>
       <td rowspan="5">インフラ</td>
       <td>AWS (S3, Lambda, RDS, etc)</td>
-      <td>4年</td>
+      <td>3年</td>
       <td>-</td>
     </tr>
     <tr>
@@ -189,7 +175,7 @@
     </tr>
     <tr>
       <td>Docker / Docker Compose</td>
-      <td>4年</td>
+      <td>3年</td>
       <td>-</td>
     </tr>
     <tr>
@@ -202,7 +188,6 @@
       <td>1年</td>
       <td>-</td>
     </tr>
-    <!-- CI/CD -->
     <tr>
       <td rowspan="2">CI/CD</td>
       <td>GitHub Actions</td>
@@ -214,7 +199,6 @@
       <td>1年</td>
       <td>-</td>
     </tr>
-    <!-- 監視 -->
     <tr>
       <td rowspan="2">監視</td>
       <td>Datadog</td>
@@ -233,10 +217,9 @@
 
 ### 2018年4月〜2022年3月: 日本大学 理工学部 機械工学科
 
-大学時代は特に材料力学に関心を持ち、部材の溶接した強度についての研究に取り組んでいました。この研究では、異なる溶接条件や材料の組み合わせが部材の強度に及ぼす影響を実験的に検証し、その結果を詳細に分析しました。また、研究過程で得たデータを数値シミュレーションによって補完し、より広範な適用可能性についても探究しました。
+大学時代は特に材料力学に関心を持ち、部材の溶接強度に関する研究に取り組みました。異なる溶接条件や材料の組み合わせが強度に与える影響を実験で検証し、得られたデータを数値シミュレーションで補完することで、より広い適用性を追求しました。この研究を通じて、実験設計・データ分析・材料の力学特性に対する理解を深め、技術課題への探究心と論理的思考力を養いました。
 
-この研究を通じて、実験設計やデータ分析のスキルを磨きました。さらに、材料の特性や力学的挙動に関する深い理解を深め、実用的な応用に向けた視野を広げることができました。今後はこの学びを活かし、技術的課題に挑戦したいと考えています。
 
 ---
 
-Last Updated: October 1, 2025
+Last Updated: April 7, 2026

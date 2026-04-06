@@ -1,0 +1,36 @@
+categories:
+  - name: "言語"
+    items:
+      - { env: "Java",       work: "3年", personal: "-" }
+      - { env: "Python",     work: "3年", personal: "-" }
+      - { env: "PHP",        work: "2年", personal: "-" }
+      - { env: "TypeScript", work: "1年", personal: "-" }
+      - { env: "Go",         work: "-",   personal: "1年" }
+  - name: "FW"
+    items:
+      - { env: "Spring Boot", work: "3年", personal: "-" }
+      - { env: "Flask",       work: "2年", personal: "-" }
+      - { env: "Next.js",     work: "-",   personal: "1年" }
+  - name: "OS"
+    items:
+      - { env: "AWS (Amazon Linux2, 2023)", work: "3年", personal: "-" }
+  - name: "DB"
+    items:
+      - { env: "PostgreSQL", work: "3年", personal: "-" }
+      - { env: "MySQL",      work: "3年", personal: "-" }
+      - { env: "DynamoDB",   work: "1年", personal: "-" }
+  - name: "インフラ"
+    items:
+      - { env: "AWS (S3, Lambda, RDS, etc)",  work: "3年", personal: "-" }
+      - { env: "ECS (Fargate)",               work: "2年", personal: "-" }
+      - { env: "Docker / Docker Compose",     work: "3年", personal: "-" }
+      - { env: "Terraform",                   work: "2年", personal: "-" }
+      - { env: "CloudFormation",              work: "1年", personal: "-" }
+  - name: "CI/CD"
+    items:
+      - { env: "GitHub Actions",                  work: "2年", personal: "-" }
+      - { env: "AWS CodePipeline / CodeBuild",    work: "1年", personal: "-" }
+  - name: "監視"
+    items:
+      - { env: "Datadog",  work: "2年", personal: "-" }
+      - { env: "Mackerel", work: "2年", personal: "-" }

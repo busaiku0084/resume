@@ -5,37 +5,39 @@
   </summary>
   <div>
     <ul>
-      <li><strong>カテゴリ:</strong> <span>webサービス</span> <span>自社</span></li>
-      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用/保守</span></li>
-      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>フロントエンド</span> <span>インフラ</span></li>
-      <li><strong>使用技術:</strong> <span>Python</span> <span>Flask</span> <span>TypeScript</span> <span>React</span> <span>AWS</span> <span>Docker</span> <span>GitHub</span> <span>GitHub Actions</span> <span>Datadog</span> <span>CI/CD</span> <span>API</span> <span>PostgreSQL</span></li>
+      <li><strong>カテゴリ:</strong> <span>Webサービス</span> <span>自社プロダクト</span> </li>
+      <li><strong>担当工程:</strong> <span>設計</span> <span>コーディング</span> <span>テスト</span> <span>運用・保守</span> </li>
+      <li><strong>職種・役割:</strong> <span>バックエンド</span> <span>フロントエンド</span> <span>インフラ</span> </li>
+      <li><strong>使用技術:</strong> <span>Python</span> <span>Flask</span> <span>TypeScript</span> <span>React</span> <span>AWS</span> <span>Docker</span> <span>GitHub</span> <span>GitHub Actions</span> <span>Datadog</span> <span>CI/CD</span> <span>REST API</span> <span>PostgreSQL</span> </li>
     </ul>
   </div>
   <div class="markdown-content">
 
 ## プロジェクト概要
 
-リダイレクタ管理ツールのリプレイス
+PerlとPHPでフルスクラッチ実装された既存システムをPython（Flask）とReact（TypeScript）にリプレイス。
+システムの設計から実装、インフラ構築、CI/CDパイプラインの構築、アプリケーションの監視までを一貫して行った。
+
 
 ## チーム情報
 
-チーム人数：2名<br/>※ 上長がコードレビューを担当
+チーム人数：2名（チーム人数：2名）
+役割：上長がコードレビューを担当
+
 
 ## 開発・実装内容
 
-### 【概要】
+サービス品質向上のため、バックエンドとフロントエンドの全面的なリプレイスを行い、インフラも刷新。
+API仕様書の作成、クラス設計、ログ設計、例外設計、AWS構成の設計を実施し、CI/CDパイプラインと監視システムを構築。
 
-PerlとPHPでフルスクラッチ実装された既存システムをPython（Flask）とReact（TypeScript）にリプレイス。<br/>システムの設計から実装、インフラ構築、CI/CDパイプラインの構築、アプリケーションの監視までを一貫して行った。
 
-### 【内容】
+## 課題・問題点
 
-サービス品質向上のため、バックエンドとフロントエンドの全面的なリプレイスを行い、インフラも刷新。<br/>API仕様書の作成、クラス設計、ログ設計、例外設計、AWS構成の設計を実施し、CI/CDパイプラインと監視システムを構築。
+既存システムは保守性が低く、新機能追加やバグ修正が困難だった。
+また、監視機能が不十分で、サービス障害発生時の対応が遅れる可能性があった。不要な機能も多く含まれていた。
 
-### 【課題・問題点】
 
-既存システムは保守性が低く、新機能追加やバグ修正が困難だった。<br/>また、監視機能が不十分で、サービス障害発生時の対応が遅れる可能性があった。不要な機能も多く含まれていた。
-
-### 【使用した技術】
+## 工夫・思考プロセス
 
 - **設計**
   - **API仕様書**: OpenAPIを使用して詳細なAPI仕様書を作成。
@@ -50,12 +52,14 @@ PerlとPHPでフルスクラッチ実装された既存システムをPython（F
 - **CI/CD**: GitHub Actionsを使用してCI/CDパイプラインを構築。
 - **監視**: MackerelとDatadogを利用して、アプリケーションとインフラの監視を実装。
 
-### 【成果】
+
+## 成果
 
 - システム保守の効率化と品質向上を達成。
 - 自動化されたデプロイによりリリースサイクルを短縮。
 - 不要な機能を削減し、システムのシンプル化と効率化を実現。
 - リアルタイムの監視体制により、将来の障害発生時の対応時間を大幅に短縮できる見込み。
+
 
 ## 使用技術（まとめ）
 
@@ -68,5 +72,6 @@ PerlとPHPでフルスクラッチ実装された既存システムをPython（F
 - **バージョン管理**: Git, GitHub
 - **監視ツール**: Mackerel, Datadog
 - **その他ツール**: Twilio
+
   </div>
 </details>

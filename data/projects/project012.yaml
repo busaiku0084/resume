@@ -1,0 +1,75 @@
+id: "012"
+name: "新規データパイプラインの構築とBIツール連携"
+company: "株式会社MPX"
+period: "2025年"
+duration: "3ヶ月"
+category:
+  - "自社プロダクト"
+phases:
+  - "要件定義"
+  - "設計"
+  - "コーディング"
+  - "テスト"
+  - "運用・保守"
+  - "その他"
+roles:
+  - "バックエンド"
+  - "インフラ"
+technologies:
+  - "Python"
+  - "AWS Lambda"
+  - "AWS Step Function"
+  - "Amazon S3"
+  - "Amazon Redshift"
+  - "Git"
+  - "Glue"
+  - "Amazon Athena"
+  - "Cloud Formation"
+  - "Tableau"
+team:
+  size: 3
+  details: "エンジニア2名、BIエンジニア1名"
+  role: "データパイプライン全体の設計・開発"
+overview: |
+  新規に収集した外部データを基に、BIツール（Tableau）での可視化を目的としたデータパイプラインを構築。
+  データの取得元はWebページやPDFファイルが中心であり、スクレイピングやPDF解析を行いながら、GlueとRedshiftを組み合わせて加工・蓄積。
+  分析用データはParquet形式で管理し、パフォーマンスを重視した構成とした。
+details: |
+  #### スクレイピング・PDF処理
+
+  - Webサイトからの定期的なデータ取得処理をPythonで実装
+  - PDFファイルからのデータ抽出も組み込み、複数形式のデータを統合
+
+  #### データ加工処理（Glue）
+
+  - 収集したデータをParquetに変換し、パーティションを付けて最適化
+  - Glueジョブで列の整形やNull処理などの前処理を実施
+
+  #### Redshiftへの投入
+
+  - Glue経由でParquetデータをRedshiftにロード
+  - データの構造に応じて分散キー・ソートキーを適切に設計
+
+  #### Tableauとの連携
+
+  - RedshiftとTableauを連携し、ビジュアライズのためのテーブル・ビューを整備
+  - 分析モデル（別部署作成）の出力結果も取り込み、統合ダッシュボードを実現
+challenges: |
+  - PDF解析の難易度が高く、データ構造の不安定さにより処理が複雑化
+  - データの更新頻度が不定期で、スケジューリングとバージョン管理が難しかった
+  - 分析モデルとの整合性維持に課題があり、データの前処理仕様を調整する必要があった
+approach: |
+  - スクレイピング処理にRetry制御や差分検出を導入し、安定性と効率を両立
+  - Glueスクリプトは再利用可能なモジュールとして設計し、他データソースへの展開を想定
+  - Tableau向けデータはビューで抽象化し、構造変更に強い構成とした
+results: |
+  - 外部データの収集から可視化までの自動パイプラインを構築
+  - Parquet利用とRedshift最適化により、データ取得の速度とクエリコストを大幅削減
+  - 分析チームやビジネス部門との連携を強化し、意思決定のスピードを向上
+tech_summary: |
+  - **プログラミング言語**: Python
+  - **データ処理**: AWS Glue, pandas, PyPDF
+  - **データ基盤**: AWS S3, AWS Redshift
+  - **データ形式**: Parquet, CSV, PDF
+  - **BIツール**: Tableau
+  - **その他**: BeautifulSoup, Requests, cron, Redshift VIEW

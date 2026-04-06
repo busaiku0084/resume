@@ -5,25 +5,24 @@ fetch('./resume.md')
   })
   .then(md => {
     document.getElementById('content').innerHTML = marked.parse(md);
-    const htmlContentElements = [...document.querySelectorAll('.html-content')].reverse();
-    htmlContentElements.forEach((container, index) => {
-      const projectFile = `./projects/project${index + 1}.md`;
+    const htmlContentElements = document.querySelectorAll('.html-content[data-project]');
+    htmlContentElements.forEach(container => {
+      const projectFile = `./projects/${container.dataset.project}.md`;
       fetch(projectFile)
         .then(response => {
           if (!response.ok) throw new Error(`${projectFile} not found`);
           return response.text();
         })
         .then(mdContent => {
-          // MarkdownをHTMLに変換して挿入
           container.innerHTML = marked.parse(mdContent.trim());
-          container.querySelectorAll('ul').forEach((ul) => {
-            ul.style.listStyle = 'disc'; // 箇条書きを適切に表示
-            ul.style.paddingLeft = '1.5rem'; // インデントを適用
-            ul.style.marginTop = '0.5rem'; // リストの上部に余白を追加
-            ul.style.marginBottom = '0.5rem'; // リストの下部に余白を追加
+          container.querySelectorAll('ul').forEach(ul => {
+            ul.style.listStyle = 'disc';
+            ul.style.paddingLeft = '1.5rem';
+            ul.style.marginTop = '0.5rem';
+            ul.style.marginBottom = '0.5rem';
           });
-          container.querySelectorAll('li').forEach((li) => {
-            li.style.marginBottom = '0.5rem'; // 各項目の余白を追加
+          container.querySelectorAll('li').forEach(li => {
+            li.style.marginBottom = '0.5rem';
           });
         })
         .catch(error => {

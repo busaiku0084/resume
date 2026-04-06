@@ -1,0 +1,105 @@
+## 自己紹介
+
+<table>
+  <tr>
+    <th>名前</th>
+    <td><%= profile.name %></td>
+  </tr>
+  <tr>
+    <th>専門領域</th>
+    <td><%= profile.specialty %></td>
+  </tr>
+  <tr>
+    <th>GitHub</th>
+    <td><a href="<%= profile.github %>" target="_blank"><%= profile.github %></a></td>
+  </tr>
+</table>
+
+## PR
+
+<%= pr.text %>
+
+## キャリア
+
+<table>
+  <thead>
+    <tr>
+      <th>期間</th>
+      <th>会社名</th>
+      <th>勤務形態</th>
+      <th>業界・事業</th>
+    </tr>
+  </thead>
+  <tbody>
+<% career.entries.forEach(function(entry) { -%>
+    <tr>
+      <td><%= entry.period %></td>
+      <td><%= entry.company %></td>
+      <td><%= entry.employment_type %></td>
+      <td><%= entry.industry %></td>
+    </tr>
+<% }); -%>
+  </tbody>
+</table>
+
+## 開発経歴
+
+<%
+const labelMap = {};
+career.entries.forEach(e => { if (!labelMap[e.company]) labelMap[e.company] = e.employment_type || e.company; });
+const companyOrder = career.entries.map(e => e.company);
+const seen = new Set();
+const companyGroups = companyOrder.filter(c => { if (seen.has(c)) return false; seen.add(c); return true; });
+companyGroups.forEach(function(company) {
+  const groupProjects = projects.filter(p => p.company === company);
+  if (groupProjects.length === 0) return;
+  const empType = labelMap[company];
+  const showCompany = company !== empType && company !== 'ー' && !empType.includes(company);
+  const label = empType + (showCompany ? '（' + company + '）' : '');
+-%>
+
+### <%= label %>
+
+<% groupProjects.forEach(function(project) { -%>
+<div class="html-content" data-project="project<%= project.id %>"></div>
+<% }); -%>
+<% }); -%>
+
+## スキルレベル
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>環境</th>
+      <th>実務経験</th>
+      <th>実務以外の経験</th>
+    </tr>
+  </thead>
+  <tbody>
+<% skills.categories.forEach(function(cat) { -%>
+<% cat.items.forEach(function(item, i) { -%>
+    <tr>
+<% if (i === 0) { -%>
+      <td rowspan="<%= cat.items.length %>"><%= cat.name %></td>
+<% } -%>
+      <td><%= item.env %></td>
+      <td><%= item.work %></td>
+      <td><%= item.personal %></td>
+    </tr>
+<% }); -%>
+<% }); -%>
+  </tbody>
+</table>
+
+## 学歴
+
+<% education.entries.forEach(function(entry) { -%>
+### <%= entry.period %>: <%= entry.school %> <%= entry.faculty %>
+
+<%= entry.description %>
+<% }); -%>
+
+---
+
+Last Updated: <%= new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %>

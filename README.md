@@ -40,21 +40,21 @@ npm install
 
 ## 使い方
 
-### ブラウザ表示用のMD生成
+### ビルドコマンド一覧
 
-```bash
-npm run build
-```
+| コマンド | 会社名 | 用途 |
+|---------|--------|------|
+| `npm run build` | 非表示（A社/B社） | GitHub Pages公開用のMD生成 |
+| `npm run build:private` | 表示 | 会社名入りのMD生成（確認用） |
+| `npm run build:pdf` | 表示 | 提出用PDF生成（`output/resume.pdf`） |
+| `npm run build:pdf:public` | 非表示（A社/B社） | 公開用PDF生成（`output/resume-public.pdf`） |
+| `npm run dev` | 非表示 | ローカルプレビュー（build + browser-sync） |
+| `npm run dev:private` | 表示 | 会社名入りでローカルプレビュー |
 
-`data/` のYAMLからMarkdownを生成し、`docs/` に出力します。
+### 会社名の表示/非表示について
 
-### 提出用PDF生成
-
-```bash
-npm run build:pdf
-```
-
-`output/resume.pdf` にPDFを出力します。
+GitHub Pagesでの公開時は会社名を非表示にします（`npm run build` がデフォルト）。
+公開用の会社名は `data/career.yaml` の `public_name` フィールドで管理しています。
 
 ### ローカルプレビュー
 

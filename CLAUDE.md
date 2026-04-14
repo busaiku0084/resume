@@ -25,6 +25,7 @@ resume/
 │   ├── skills.yaml                # スキルセット
 │   ├── education.yaml             # 学歴
 │   ├── pr.yaml                    # 自己PR
+│   ├── draft.yaml                 # 転職ドラフト固有項目
 │   └── projects/                  # 各プロジェクト（1ファイル=1プロジェクト）
 │       ├── project001.yaml
 │       ├── project002.yaml
@@ -32,11 +33,15 @@ resume/
 ├── templates/                     # テンプレート（EJS or Handlebars）
 │   ├── resume.md.ejs              # ブラウザ表示用MDテンプレート
 │   ├── project.md.ejs             # 個別プロジェクトMDテンプレート
-│   └── pdf/                       # PDF用テンプレート
-│       └── resume-pdf.md.ejs      # 提出用PDF向けテンプレート（resume2のデザイン準拠）
+│   ├── pdf/                       # PDF用テンプレート
+│   │   └── resume-pdf.md.ejs      # 提出用PDF向けテンプレート（resume2のデザイン準拠）
+│   └── draft/                     # 転職ドラフト用テンプレート
+│       ├── project.md.ejs         # プロジェクト個別MD（コピペ用）
+│       └── profile.md.ejs         # 固有項目MD
 ├── scripts/                       # ビルドスクリプト
 │   ├── build.js                   # YAML → MD 生成（ブラウザ用）
-│   └── build-pdf.js               # YAML → PDF 生成（提出用）
+│   ├── build-pdf.js               # YAML → PDF 生成（提出用）
+│   └── build-draft.js             # YAML → 転職ドラフト用MD生成
 ├── docs/                          # 生成物（GitHub Pages公開用）※git管理する
 │   ├── index.html
 │   ├── style.css
@@ -46,8 +51,11 @@ resume/
 │   └── projects/                  # ← 自動生成
 │       ├── project001.md
 │       └── ...
-└── output/                        # PDF出力先（.gitignore対象）
-    └── resume.pdf
+└── output/                        # 出力先（.gitignore対象）
+    ├── resume.pdf
+    └── draft/                     # 転職ドラフト用MD
+        ├── profile.md             # 固有項目（コピペ用）
+        └── projects/              # プロジェクト別MD（コピペ用）
 ```
 
 ## プロジェクトYAMLの統一フィールド
@@ -101,9 +109,13 @@ tech_summary: |                         # 使用技術まとめ
 ## ビルドコマンド
 
 ```bash
-npm run build          # YAML → docs/ にMD生成（ブラウザ表示用）
-npm run build:pdf      # YAML → output/resume.pdf 生成（提出用）
-npm run dev            # build + browser-sync でローカルプレビュー
+npm run build              # YAML → docs/ にMD生成（公開用、会社名非表示）
+npm run build:private      # YAML → docs/ にMD生成（会社名表示）
+npm run build:pdf          # YAML → output/resume.pdf 生成（提出用、会社名表示）
+npm run build:pdf:public   # YAML → output/resume-public.pdf 生成（会社名非表示）
+npm run build:draft        # YAML → output/draft/ に転職ドラフト用MD生成（会社名表示）
+npm run build:draft:public # YAML → output/draft/ に転職ドラフト用MD生成（会社名非表示）
+npm run dev                # build + browser-sync でローカルプレビュー
 ```
 
 ## 技術スタック

@@ -17,19 +17,28 @@ data/                  # データ層（YAML）
 ├── career.yaml        # 職歴
 ├── skills.yaml        # スキルセット
 ├── education.yaml     # 学歴
+├── draft.yaml         # 転職ドラフト固有項目
 └── projects/          # 各プロジェクト（1ファイル=1プロジェクト）
     ├── project001.yaml
     └── ...
 templates/             # テンプレート（EJS）
 ├── resume.md.ejs      # ブラウザ表示用
 ├── project.md.ejs     # 個別プロジェクト用
-└── pdf/
-    └── resume-pdf.md.ejs  # PDF用
+├── pdf/
+│   └── resume-pdf.md.ejs  # PDF用
+└── draft/
+    ├── project.md.ejs     # 転職ドラフト用プロジェクト（コピペ用）
+    └── profile.md.ejs     # 転職ドラフト用プロフィール項目
 scripts/               # ビルドスクリプト
 ├── build.js           # YAML → MD 生成
-└── build-pdf.js       # YAML → PDF 生成
+├── build-pdf.js       # YAML → PDF 生成
+└── build-draft.js     # YAML → 転職ドラフト用MD生成
 docs/                  # 生成物（GitHub Pages公開用）
-output/                # PDF出力先（.gitignore対象）
+output/                # 出力先（.gitignore対象）
+├── resume.pdf         # 提出用PDF
+└── draft/             # 転職ドラフト用MD
+    ├── profile.md     # 固有項目（コピペ用）
+    └── projects/      # プロジェクト別MD（コピペ用）
 ```
 
 ## セットアップ
@@ -47,7 +56,9 @@ npm install
 | `npm run build` | 非表示（A社/B社） | GitHub Pages公開用のMD生成 |
 | `npm run build:private` | 表示 | 会社名入りのMD生成（確認用） |
 | `npm run build:pdf` | 表示 | 提出用PDF生成（`output/resume.pdf`） |
-| `npm run build:pdf:public` | 非表示（A社/B社） | 公開用PDF生成（`output/resume-public.pdf`） |
+| `npm run build:pdf:public` | 非表示 | 公開用PDF生成（`output/resume-public.pdf`） |
+| `npm run build:draft` | 表示 | 転職ドラフト用MD生成（`output/draft/`） |
+| `npm run build:draft:public` | 非表示 | 転職ドラフト用MD生成（会社名非表示） |
 | `npm run dev` | 非表示 | ローカルプレビュー（build + browser-sync） |
 | `npm run dev:private` | 表示 | 会社名入りでローカルプレビュー |
 

@@ -67,6 +67,10 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
 
 <div class="html-content" data-project="project014"></div>
 
+### 正社員（AI受託系企業）
+
+<div class="html-content" data-project="project015"></div>
+
 ### 正社員（電力系企業）
 
 <div class="html-content" data-project="project013"></div>
@@ -222,4 +226,4 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
 
 ---
 
-Last Updated: April 7, 2026
+Last Updated: April 15, 2026

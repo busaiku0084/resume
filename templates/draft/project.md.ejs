@@ -1,0 +1,52 @@
+# <%= project.name %>
+
+## 概要
+
+<%= project.overview.trim() %>
+<% if (project.team && project.team.size > 0) { %>
+
+## チーム情報
+
+チーム人数：<%= project.team.size %>名<% if (project.team.details) { %>（<%= project.team.details %>）<% } %>
+<% if (project.team.role) { -%>
+役割：<%= project.team.role %>
+<% } -%>
+<% } -%>
+
+## 担当工程
+
+<%= project.phases.join('、') %>
+
+## 職種・役割
+
+<%= project.roles.join('、') %>
+<% if (project.details && project.details.trim()) { %>
+
+## 開発・実装内容
+
+<%= project.details.trim() %>
+<% } -%>
+<% if (project.challenges && project.challenges.trim()) { %>
+
+## 課題・問題点
+
+<%= project.challenges.trim() %>
+<% } -%>
+<% if (project.approach && project.approach.trim()) { %>
+
+## 工夫・思考プロセス
+
+<%= project.approach.trim() %>
+<% } -%>
+<% if (project.results && project.results.trim()) { %>
+
+## 成果
+
+<%= project.results.trim() %>
+<% } -%>
+<% if (project.tech_summary && project.tech_summary.trim()) { %>
+
+## 使用技術
+
+<%= project.tech_summary.trim() %>
+<% } %>

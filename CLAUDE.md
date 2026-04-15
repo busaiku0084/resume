@@ -26,6 +26,7 @@ resume/
 │   ├── education.yaml             # 学歴
 │   ├── pr.yaml                    # 自己PR
 │   ├── draft.yaml                 # 転職ドラフト固有項目
+│   ├── wantedly.yaml              # Wantedly固有項目
 │   └── projects/                  # 各プロジェクト（1ファイル=1プロジェクト）
 │       ├── project001.yaml
 │       ├── project002.yaml
@@ -35,13 +36,17 @@ resume/
 │   ├── project.md.ejs             # 個別プロジェクトMDテンプレート
 │   ├── pdf/                       # PDF用テンプレート
 │   │   └── resume-pdf.md.ejs      # 提出用PDF向けテンプレート（resume2のデザイン準拠）
-│   └── draft/                     # 転職ドラフト用テンプレート
-│       ├── project.md.ejs         # プロジェクト個別MD（コピペ用）
-│       └── profile.md.ejs         # 固有項目MD
+│   ├── draft/                     # 転職ドラフト用テンプレート
+│   │   ├── project.md.ejs         # プロジェクト個別MD（コピペ用）
+│   │   └── profile.md.ejs         # 固有項目MD
+│   └── wantedly/                  # Wantedly用テンプレート（txt形式、Markdown非対応）
+│       ├── project.txt.ejs        # プロジェクト個別txt（コピペ用）
+│       └── profile.txt.ejs        # 固有項目txt
 ├── scripts/                       # ビルドスクリプト
 │   ├── build.js                   # YAML → MD 生成（ブラウザ用）
 │   ├── build-pdf.js               # YAML → PDF 生成（提出用）
-│   └── build-draft.js             # YAML → 転職ドラフト用MD生成
+│   ├── build-draft.js             # YAML → 転職ドラフト用MD生成
+│   └── build-wantedly.js          # YAML → Wantedly用txt生成
 ├── docs/                          # 生成物（GitHub Pages公開用）※git管理する
 │   ├── index.html
 │   ├── style.css
@@ -53,9 +58,12 @@ resume/
 │       └── ...
 └── output/                        # 出力先（.gitignore対象）
     ├── resume.pdf
-    └── draft/                     # 転職ドラフト用MD
-        ├── profile.md             # 固有項目（コピペ用）
-        └── projects/              # プロジェクト別MD（コピペ用）
+    ├── draft/                     # 転職ドラフト用MD
+    │   ├── profile.md             # 固有項目（コピペ用）
+    │   └── projects/              # プロジェクト別MD（コピペ用）
+    └── wantedly/                  # Wantedly用txt（Markdown非対応のためプレーンテキスト）
+        ├── profile.txt            # 固有項目（コピペ用）
+        └── projects/              # プロジェクト別txt（コピペ用）
 ```
 
 ## プロジェクトYAMLの統一フィールド
@@ -115,6 +123,8 @@ npm run build:pdf          # YAML → output/resume.pdf 生成（提出用、会
 npm run build:pdf:public   # YAML → output/resume-public.pdf 生成（会社名非表示）
 npm run build:draft        # YAML → output/draft/ に転職ドラフト用MD生成（会社名表示）
 npm run build:draft:public # YAML → output/draft/ に転職ドラフト用MD生成（会社名非表示）
+npm run build:wantedly     # YAML → output/wantedly/ にWantedly用txt生成（会社名表示）
+npm run build:wantedly:public # YAML → output/wantedly/ にWantedly用txt生成（会社名非表示）
 npm run dev                # build + browser-sync でローカルプレビュー
 ```
 

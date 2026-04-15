@@ -9,6 +9,8 @@
     "build:pdf:public": "node scripts/build-pdf.js --public",
     "build:draft": "node scripts/build-draft.js",
     "build:draft:public": "node scripts/build-draft.js --public",
+    "build:wantedly": "node scripts/build-wantedly.js",
+    "build:wantedly:public": "node scripts/build-wantedly.js --public",
     "dev": "npm run build && cd docs && browser-sync start --server --files '**/*'",
     "dev:private": "npm run build:private && cd docs && browser-sync start --server --files '**/*'",
     "test": "echo \"Error: no test specified\" && exit 1"

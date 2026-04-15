@@ -18,6 +18,7 @@ data/                  # データ層（YAML）
 ├── skills.yaml        # スキルセット
 ├── education.yaml     # 学歴
 ├── draft.yaml         # 転職ドラフト固有項目
+├── wantedly.yaml      # Wantedly固有項目
 └── projects/          # 各プロジェクト（1ファイル=1プロジェクト）
     ├── project001.yaml
     └── ...
@@ -26,19 +27,26 @@ templates/             # テンプレート（EJS）
 ├── project.md.ejs     # 個別プロジェクト用
 ├── pdf/
 │   └── resume-pdf.md.ejs  # PDF用
-└── draft/
-    ├── project.md.ejs     # 転職ドラフト用プロジェクト（コピペ用）
-    └── profile.md.ejs     # 転職ドラフト用プロフィール項目
+├── draft/
+│   ├── project.md.ejs     # 転職ドラフト用プロジェクト（コピペ用）
+│   └── profile.md.ejs     # 転職ドラフト用プロフィール項目
+└── wantedly/
+    ├── project.txt.ejs    # Wantedly用プロジェクト（txt、コピペ用）
+    └── profile.txt.ejs    # Wantedly用プロフィール項目（txt）
 scripts/               # ビルドスクリプト
 ├── build.js           # YAML → MD 生成
 ├── build-pdf.js       # YAML → PDF 生成
-└── build-draft.js     # YAML → 転職ドラフト用MD生成
+├── build-draft.js     # YAML → 転職ドラフト用MD生成
+└── build-wantedly.js  # YAML → Wantedly用txt生成
 docs/                  # 生成物（GitHub Pages公開用）
 output/                # 出力先（.gitignore対象）
 ├── resume.pdf         # 提出用PDF
-└── draft/             # 転職ドラフト用MD
-    ├── profile.md     # 固有項目（コピペ用）
-    └── projects/      # プロジェクト別MD（コピペ用）
+├── draft/             # 転職ドラフト用MD
+│   ├── profile.md     # 固有項目（コピペ用）
+│   └── projects/      # プロジェクト別MD（コピペ用）
+└── wantedly/          # Wantedly用txt
+    ├── profile.txt    # 固有項目（コピペ用）
+    └── projects/      # プロジェクト別txt（コピペ用）
 ```
 
 ## セットアップ
@@ -59,6 +67,8 @@ npm install
 | `npm run build:pdf:public` | 非表示 | 公開用PDF生成（`output/resume-public.pdf`） |
 | `npm run build:draft` | 表示 | 転職ドラフト用MD生成（`output/draft/`） |
 | `npm run build:draft:public` | 非表示 | 転職ドラフト用MD生成（会社名非表示） |
+| `npm run build:wantedly` | 表示 | Wantedly用txt生成（`output/wantedly/`、Markdownなし） |
+| `npm run build:wantedly:public` | 非表示 | Wantedly用txt生成（会社名非表示） |
 | `npm run dev` | 非表示 | ローカルプレビュー（build + browser-sync） |
 | `npm run dev:private` | 表示 | 会社名入りでローカルプレビュー |
 

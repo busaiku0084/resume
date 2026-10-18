@@ -1,0 +1,96 @@
+<details>
+  <summary>
+    生成AIを活用した企業開示情報抽出システムのリプレイス開発
+    <span>2026年/3ヶ月</span>
+  </summary>
+  <div>
+    <ul>
+      <li><strong>カテゴリ:</strong> <span>Webサービス</span> <span>受託</span> </li>
+      <li><strong>担当工程:</strong> <span>要件定義</span> <span>設計</span> <span>コーディング</span> <span>テスト</span> </li>
+      <li><strong>職種・役割:</strong> <span>フロントエンド</span> <span>バックエンド</span> <span>インフラ</span> </li>
+      <li><strong>使用技術:</strong> <span>Python</span> <span>FastAPI</span> <span>TypeScript</span> <span>React</span> <span>PostgreSQL</span> <span>Docker</span> <span>Claude API</span> <span>GitHub Actions</span> </li>
+    </ul>
+  </div>
+  <div class="markdown-content">
+
+## プロジェクト概要
+
+上場企業が公開する開示資料（ESGレポート・統合報告書など）から、生成AI（LLM）を用いてESG関連の構造化データを自動抽出するWebアプリケーションのリプレイス案件。既存システムはAIによる抽出精度が十分でなく、人手によるレビュー・修正コストの高さが課題となっていた。対象は上場企業数千社 × 抽出項目127項目 × 複数年度という規模で、精度改善のインパクトが大きい領域だった。
+
+要件定義（0.5ヶ月）から開発（2.5ヶ月）までを請負契約で受託し、開発は1人で担当。フロントエンド・バックエンド・インフラまで一気通貫で設計・実装した。
+
+
+## チーム情報
+
+チーム人数：2名（開発1名、PM 1名）
+役割：フルスタックエンジニア（開発主担当）
+
+
+## 開発・実装内容
+
+#### LLM抽出パイプラインの構築
+
+- PDFをページ単位で画像化し、Claude APIに送信して構造化データを抽出するパイプラインを実装
+- PDF抽出・Excel/CSV抽出・Web抽出（AI検索でURL探索→ページ描画→PDF化→抽出）の3方式に対応
+- プロンプトキャッシングによるAPIコスト削減、関連プロンプトのグルーピングによるバッチ処理と文脈整合性の担保
+- Batch APIを使った省コストモード（APIコスト約50%削減）を実装
+- モデル切替可能な抽象レイヤーを設け、LLMのバージョンアップやマルチモデル対応に追従しやすい構成に
+
+#### バックエンド
+
+- Python / FastAPI + SQLAlchemy 2.0（async）+ PostgreSQL による非同期API設計
+- Redis/Celeryを導入せず、FastAPI BackgroundTasks + DBベースのジョブ管理で抽出のバックグラウンド処理を実装
+- fastapi-users + JWT + メール2段階認証によるアカウント管理
+- 監査ログ、グループ単位のデータ可視性制御、ユーザー・権限管理などの管理者機能
+
+#### フロントエンド
+
+- React + TypeScript + Vite のSPA（Ant Design、TanStack Query、Zustand）で全17画面を実装
+- 抽出進捗表示、抽出元ドキュメントの該当箇所を示すエビデンスハイライト、Excel/ZIPダウンロード（非同期）など
+
+#### インフラ・CI/CD
+
+- Docker Compose 3コンテナ構成（frontend / backend / postgres）、nginxによるHTTPS終端・IP制限
+- GitHub ActionsによるCI/CD
+- 将来のスケールアウトパス（ワーカー分離、S3互換ストレージ移行、コンテナサービス移行）を設計に織り込み
+
+
+## 課題・問題点
+
+- 既存システムはデータ有無の判定一致率71.6%・抽出テキスト一致率35.0%にとどまり、1PDFあたり約1,500円・約2時間というコストと処理時間も課題だった
+- 「AIの抽出精度」という定量化しにくい対象について、類似度指標や判定基準といった性能要件を顧客と合意する必要があった
+- 開発者は自分1人で、要件定義0.5ヶ月＋開発2.5ヶ月の短期間で既存同等機能の実装と精度向上を両立する必要があった
+
+
+## 工夫・思考プロセス
+
+- 抽出方式を根本から見直し、JSON構造化ベースの新方式を要件定義段階でプロトタイプ検証。正解データとの突合による定量評価を繰り返しながら、顧客と性能要件をすり合わせた
+- 類似度の算出方法やテキスト比較の分割粒度など、性能指標の定義そのものを顧客と議論し、納得感のある受入基準に落とし込んだ
+- プロンプトや抽出ロジックをコアシステムから独立させ、新しいドキュメント形式の追加が大規模改修なしで行える保守性の高い構成にした
+- インフラは運用負荷を最小化するシンプルな構成を選択しつつ、将来の拡張パスを設計として残した
+- 1人開発を成立させるため、生成AI（Claude Code）を設計・実装・テストの全工程に組み込み、開発生産性を最大化した
+
+
+## 成果
+
+- 新抽出方式の検証で、データ有無の判定一致率を71.6%→82.3%、抽出テキスト一致率を35.0%→41.9%に改善。誤検知（過検知）は平均2.81件→0.14件に大幅減少
+- 1PDFあたりの抽出コストを約1,500円→約700円（半分以下に削減）、処理時間を約2時間→約20分（約6分の1に短縮）
+- 要件定義から開発完了まで、開発1名体制で予定通り3ヶ月で完遂し、顧客の受入テストへ引き渡した
+
+
+## 使用技術（まとめ）
+
+- **プログラミング言語**: Python 3.12, TypeScript
+- **フレームワーク**: FastAPI, React, Vite
+- **UIライブラリ**: Ant Design
+- **状態管理**: TanStack Query, Zustand
+- **DB/ORM**: PostgreSQL, SQLAlchemy 2.0（async）, Alembic
+- **LLM**: Anthropic Claude API（Batch API、プロンプトキャッシング）
+- **PDF/データ処理**: PyMuPDF, pandas, openpyxl, Playwright
+- **認証**: fastapi-users, JWT, メール2段階認証
+- **インフラ**: Docker Compose, nginx, Let&#39;s Encrypt
+- **CI/CD**: GitHub Actions
+- **バージョン管理**: Git（GitHub）
+
+  </div>
+</details>

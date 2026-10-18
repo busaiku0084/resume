@@ -30,7 +30,7 @@ technologies:
   - "PostgreSQL"
 team:
   size: 2
-  details: "チーム人数：2名"
+  details: ""
   role: "上長がコードレビューを担当"
 overview: |
   PerlとPHPでフルスクラッチ実装された既存システムをPython（Flask）とReact（TypeScript）にリプレイス。

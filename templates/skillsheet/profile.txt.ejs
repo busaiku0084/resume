@@ -1,0 +1,29 @@
+■ 自己PR
+
+<%- toPlainText(pr.text) %>
+
+■ 得意分野
+
+<%- profile.specialty %>
+
+■ 職務経歴
+
+<% career.entries.forEach(function(entry) { -%>
+<% const comp = entry.employment_type.includes(entry.company) ? entry.employment_type : entry.company + '（' + entry.employment_type + '）'; -%>
+・<%= entry.period %>　<%= comp %>／<%= entry.industry %>
+<% }); -%>
+
+■ スキル（経験年数：業務／個人）
+
+<% skills.categories.forEach(function(cat) { -%>
+【<%- cat.name %>】
+<% cat.items.forEach(function(i) { -%>
+・<%- i.env %>：<%- i.work %>／<%- i.personal %>
+<% }); -%>
+
+<% }); -%>
+■ プロジェクト一覧
+
+<% projects.forEach(function(p) { -%>
+・<%- p.period %>（<%- p.duration %>）<%- p.name %>
+<% }); -%>

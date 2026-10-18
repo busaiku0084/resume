@@ -25,7 +25,7 @@ technologies:
   - "SQL"
 team:
   size: 4
-  details: "チーム人数：4名"
+  details: ""
   role: ""
 overview: |
   決済システムにクレジットカードの再与信インターフェース(IF)を追加し、システムの幅を広げるとともに、既存機能の運用改善と不具合修正を行った。

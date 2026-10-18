@@ -65,10 +65,15 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
 
 ### 業務委託（副業）
 
+<div class="html-content" data-project="project020"></div>
+<div class="html-content" data-project="project017"></div>
 <div class="html-content" data-project="project014"></div>
 
 ### 正社員（AI受託系企業）
 
+<div class="html-content" data-project="project019"></div>
+<div class="html-content" data-project="project018"></div>
+<div class="html-content" data-project="project016"></div>
 <div class="html-content" data-project="project015"></div>
 
 ### 正社員（電力系企業）
@@ -129,7 +134,7 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
       <td>1年</td>
     </tr>
     <tr>
-      <td rowspan="3">FW</td>
+      <td rowspan="6">FW</td>
       <td>Spring Boot</td>
       <td>3年</td>
       <td>-</td>
@@ -137,6 +142,21 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
     <tr>
       <td>Flask</td>
       <td>2年</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>FastAPI</td>
+      <td>1年未満</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CakePHP</td>
+      <td>1年未満</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>React</td>
+      <td>1年未満</td>
       <td>-</td>
     </tr>
     <tr>
@@ -167,7 +187,7 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
       <td>-</td>
     </tr>
     <tr>
-      <td rowspan="5">インフラ</td>
+      <td rowspan="6">インフラ</td>
       <td>AWS (S3, Lambda, RDS, etc)</td>
       <td>3年</td>
       <td>-</td>
@@ -193,6 +213,11 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
       <td>-</td>
     </tr>
     <tr>
+      <td>AWS CDK</td>
+      <td>1年未満</td>
+      <td>-</td>
+    </tr>
+    <tr>
       <td rowspan="2">CI/CD</td>
       <td>GitHub Actions</td>
       <td>2年</td>
@@ -214,6 +239,17 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
       <td>2年</td>
       <td>-</td>
     </tr>
+    <tr>
+      <td rowspan="2">AI・LLM</td>
+      <td>Anthropic Claude API（LLMアプリケーション開発）</td>
+      <td>1年未満</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>生成AI開発支援ツール（Claude Code, GitHub Copilot）</td>
+      <td>1年</td>
+      <td>1年</td>
+    </tr>
   </tbody>
 </table>
 
@@ -226,4 +262,4 @@ Java、Python、TypeScriptなどの言語とクラウド技術を活用し、要
 
 ---
 
-Last Updated: April 15, 2026
+Last Updated: October 19, 2026

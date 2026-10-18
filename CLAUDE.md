@@ -35,13 +35,23 @@ resume/
 │   ├── project.md.ejs             # 個別プロジェクトMDテンプレート
 │   ├── pdf/                       # PDF用テンプレート
 │   │   └── resume-pdf.md.ejs      # 提出用PDF向けテンプレート（resume2のデザイン準拠）
-│   └── draft/                     # 転職ドラフト用テンプレート
-│       ├── project.md.ejs         # プロジェクト個別MD（コピペ用）
-│       └── profile.md.ejs         # 固有項目MD
+│   ├── draft/                     # 転職ドラフト用テンプレート
+│   │   ├── project.md.ejs         # プロジェクト個別MD（コピペ用）
+│   │   └── profile.md.ejs         # 固有項目MD
+│   ├── wantedly/                  # Wantedly用テンプレート（プレーンテキスト）
+│   │   ├── project.txt.ejs        # プロジェクト個別テキスト（コピペ用）
+│   │   └── profile.txt.ejs        # 自己紹介・経歴・スキル
+│   └── skillsheet/                # スキルシートクラウド用テンプレート（プレーンテキスト）
+│       ├── project.txt.ejs        # プロジェクト個別テキスト（メタ情報＋本文、コピペ用）
+│       └── profile.txt.ejs        # 自己PR・経歴・スキル年数・PJ一覧
 ├── scripts/                       # ビルドスクリプト
 │   ├── build.js                   # YAML → MD 生成（ブラウザ用）
 │   ├── build-pdf.js               # YAML → PDF 生成（提出用）
-│   └── build-draft.js             # YAML → 転職ドラフト用MD生成
+│   ├── build-draft.js             # YAML → 転職ドラフト用MD生成
+│   ├── build-wantedly.js          # YAML → Wantedly用テキスト生成
+│   ├── build-skillsheet.js        # YAML → スキルシートクラウド用テキスト生成
+│   ├── load-data.js               # YAML読み込み・公開モードのマスキング
+│   └── text-utils.js              # Markdown → プレーンテキスト変換（テキスト系出力で共通）
 ├── docs/                          # 生成物（GitHub Pages公開用）※git管理する
 │   ├── index.html
 │   ├── style.css
@@ -53,9 +63,15 @@ resume/
 │       └── ...
 └── output/                        # 出力先（.gitignore対象）
     ├── resume.pdf
-    └── draft/                     # 転職ドラフト用MD
-        ├── profile.md             # 固有項目（コピペ用）
-        └── projects/              # プロジェクト別MD（コピペ用）
+    ├── draft/                     # 転職ドラフト用MD
+    │   ├── profile.md             # 固有項目（コピペ用）
+    │   └── projects/              # プロジェクト別MD（コピペ用）
+    ├── wantedly/                  # Wantedly用テキスト
+    │   ├── profile.txt            # 自己紹介・経歴・スキル（コピペ用）
+    │   └── projects/              # プロジェクト別テキスト（コピペ用）
+    └── skillsheet/                # スキルシートクラウド用テキスト
+        ├── profile.txt            # 自己PR・経歴・スキル（コピペ用）
+        └── projects/              # プロジェクト別テキスト（コピペ用）
 ```
 
 ## プロジェクトYAMLの統一フィールド
@@ -115,6 +131,10 @@ npm run build:pdf          # YAML → output/resume.pdf 生成（提出用、会
 npm run build:pdf:public   # YAML → output/resume-public.pdf 生成（会社名非表示）
 npm run build:draft        # YAML → output/draft/ に転職ドラフト用MD生成（会社名表示）
 npm run build:draft:public # YAML → output/draft/ に転職ドラフト用MD生成（会社名非表示）
+npm run build:wantedly        # YAML → output/wantedly/ にWantedly用テキスト生成（会社名表示）
+npm run build:wantedly:public # YAML → output/wantedly/ にWantedly用テキスト生成（会社名非表示）
+npm run build:skillsheet        # YAML → output/skillsheet/ にスキルシートクラウド用テキスト生成（会社名表示）
+npm run build:skillsheet:public # YAML → output/skillsheet/ にスキルシートクラウド用テキスト生成（会社名非表示）
 npm run dev                # build + browser-sync でローカルプレビュー
 ```
 

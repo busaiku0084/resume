@@ -24,7 +24,7 @@ technologies:
   - "PostgreSQL"
 team:
   size: 1
-  details: "チーム人数：1名"
+  details: ""
   role: ""
 overview: |
   廃止予定だったレガシーシステムの継続運用と既存改修を担当。

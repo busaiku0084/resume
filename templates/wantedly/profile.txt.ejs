@@ -1,0 +1,19 @@
+■ 自己紹介
+
+<%- toPlainText(pr.text) %>
+
+得意分野：<%= profile.specialty %>
+GitHub：<%= profile.github %>
+
+■ 経歴
+
+<% career.entries.forEach(function(entry) { -%>
+<% const comp = entry.employment_type.includes(entry.company) ? entry.employment_type : entry.company + '（' + entry.employment_type + '）'; -%>
+・<%= entry.period %>　<%= comp %>／<%= entry.industry %>
+<% }); -%>
+
+■ スキル
+
+<% skills.categories.forEach(function(cat) { -%>
+・<%- cat.name %>：<%- cat.items.filter(function(i) { return i.work !== '-'; }).map(function(i) { return i.env; }).join('、') %>
+<% }); -%>

@@ -28,7 +28,7 @@ technologies:
   - "E2E"
 team:
   size: 3
-  details: "チーム人数：3名"
+  details: ""
   role: ""
 overview: |
   画像変換サーバに他社向けの新インターフェース(IF)を追加し、システム利用者の増加に対応するためのインフラ構築と修正を行った。

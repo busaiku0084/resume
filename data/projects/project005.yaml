@@ -29,7 +29,7 @@ technologies:
   - "REST API"
 team:
   size: 3
-  details: "チーム人数：3名"
+  details: ""
   role: ""
 overview: |
   画像変換サーバに新機能を追加し、WEBP拡張子への対応を行った。詳細設計から実装、テストまでを担当し、システムのパフォーマンス向上を実現。

@@ -27,7 +27,7 @@ technologies:
   - "E2E"
 team:
   size: 3
-  details: "チーム人数：3名"
+  details: ""
   role: ""
 overview: |
   サービス品質向上を目的として、既存のJavaフルスクラッチシステムをSpring Bootを使用したシステムにリプレイス。
